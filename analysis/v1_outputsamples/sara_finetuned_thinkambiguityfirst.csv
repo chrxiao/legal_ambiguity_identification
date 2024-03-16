@@ -1,0 +1,78 @@
+,run,ds_ind,model_output,uncertain,uncertain_object,mult_interp,statute_lang,core_ambiguity
+0,v1.2_02-25-2024_14-03-24,34,"Ambiguity in this context refers to a situation where the language of the statute is unclear or open to more than one interpretation.
+
+In this case, there is no ambiguity in the statute provided. The statute clearly states that if the taxable income is not over $22,100, the tax rate is 15%. Since the fact pattern states that Alice's taxable income is $71,879, which is over $22,100, it is clear that the tax rate applicable to Alice's taxable income is not 15%. Therefore, the response is ""False.""",TRUE,statute,TRUE,TRUE,both
+1,v1.2_02-25-2024_14-03-24,75,"Ambiguity in this context means that the language used in the statute is unclear or open to multiple interpretations.
+
+False",TRUE,statute,TRUE,TRUE,both
+2,v1.2_02-24-2024_20-31-52,260,"Ambiguity in this context means that the language of the statute could be interpreted in more than one way or is unclear, leading to confusion or uncertainty about its intended meaning.
+
+In this case, the statute includes the phrase ""a joint return."" The fact pattern mentions that Alice and Bob have filed a joint return for 2017. The language of the statute is clear as it specifically mentions ""a joint return,"" and the fact pattern aligns with this requirement by stating that Alice and Bob filed a joint return. Therefore, there is no ambiguity in this scenario.
+
+False",TRUE,statute,TRUE,TRUE,both
+3,v1.2_02-21-2024_15-04-34,250,"Ambiguity in this context means that the language used in the statute is unclear or open to more than one interpretation.
+
+Given the fact pattern and the language of the statute, the phrase ""irrespective of the citizenship or residence of either"" may introduce ambiguity. It is not clear whether Bob's assistance to Alice falls within the scope of the phrase. 
+
+Therefore, the response is: True",TRUE,statute,TRUE,TRUE,both
+4,v1.2_02-25-2024_14-03-24,89,"In this context, ambiguity refers to uncertainty or lack of clarity in the language of the statute, which may lead to different interpretations or confusion.
+
+Is there ambiguity in the following?",TRUE,statute,TRUE,TRUE,counter
+5,v1.2_02-24-2024_20-31-52,27,"In this context, ambiguity may arise when there is uncertainty or lack of clarity in the interpretation of a legal statute, leading to different possible meanings or interpretations.
+
+Response: True",TRUE,statute,TRUE,FALSE,both
+6,v1.2_02-25-2024_14-03-24,266,"Ambiguity in this context refers to any uncertainty or lack of clarity in the language of the statute that could lead to different interpretations or understandings of its meaning.
+
+Given the statute and fact pattern provided, is there ambiguity?
+- False",TRUE,statute,TRUE,TRUE,both
+7,v1.2_02-25-2024_14-03-24,116,"Ambiguity in legal context means that a provision or language in a statute or contract is unclear, open to interpretation, or could be understood in more than one way.
+
+In the given fact pattern, the term ""adoptive brother"" is not explicitly mentioned in the statute. Therefore, there is ambiguity in how the term ""brother"" should be interpreted. 
+
+Therefore, the response is: True",TRUE,statute,TRUE,TRUE,both
+8,v1.2_02-24-2024_20-31-52,173,"In this context, ambiguity refers to a lack of clarity or uncertainty in the interpretation of the legal statute.
+
+Given the wording of the legal statute and the fact pattern provided, there is no ambiguity present. Both the statute and the fact pattern are clear and specific.",TRUE,statute,FALSE,FALSE,both
+9,v1.2_02-25-2024_14-03-24,247,"Ambiguity in this context refers to uncertainty or lack of clarity in the language of the statute.
+
+False",TRUE,statute,FALSE,TRUE,counter
+10,v1.2_02-25-2024_14-03-24,296,"Ambiguity in this context refers to uncertainty or lack of clarity in the language of the statute that could lead to different interpretations or understandings.
+
+In the given statute, there is no ambiguity. The statute clearly states that an individual legally separated from his spouse under a decree of divorce or of separate maintenance shall not be considered as married. Since Alice and Bob got married in 2012 and have not undergone legal separation, they are considered married under this statute. 
+
+**False**",TRUE,statute,TRUE,TRUE,counter
+11,v1.2_02-24-2024_20-31-52,170,"Ambiguity in legal context refers to a situation where a term, phrase, or provision in a statute can be interpreted in more than one way.
+
+In this context, the term ""he"" in the statute provided is referring to an individual taxpayer. Therefore, there is no ambiguity in the statute and the fact pattern provided as it is clear that it is referring to individuals.
+
+**False**",TRUE,statute,TRUE,TRUE,counter
+12,v1.2_02-24-2024_20-31-52,78,"Ambiguity in this context refers to uncertainty or lack of clarity in the language of the statute, which could lead to different interpretations or confusion about its intended meaning.
+
+Given the statute provided, there is no ambiguity.",TRUE,statute,TRUE,TRUE,both
+13,v1.2_02-24-2024_20-31-52,76,"Ambiguity in this context means that the language used in the statute is unclear or open to interpretation, leading to confusion about its meaning when applied to a specific situation.
+
+False",TRUE,statute,TRUE,TRUE,mine
+14,v1.2_02-24-2024_20-31-52,55,"Ambiguity in this context refers to the presence of multiple reasonable interpretations or meanings within a legal document.
+
+False",FALSE,statute,TRUE,FALSE,mine
+15,v1.2_02-21-2024_15-04-34,51,"Ambiguity in a legal context refers to uncertainty or lack of clarity in the language of a statute, making it open to more than one interpretation.
+
+In this fact pattern, there is no ambiguity. The statute clearly states that for taxable income over $44,575 but not over $70,000, the tax owed is $10,082.50 plus 31% of the excess over $44,575. Since Alice's taxable income is $67,285 which falls within this range, the tax owed can be calculated accurately. 
+
+Therefore, the response is ""False.""",TRUE,statute,TRUE,TRUE,counter
+16,v1.2_02-25-2024_14-03-24,186,"Ambiguity in legal context refers to a lack of clarity or uncertainty in the language used in a statute that can lead to multiple interpretations or confusion in its application.
+
+In this fact pattern, there is ambiguity regarding what type of service is considered under the definition of domestic service in the statute. Specifically, it is not clear whether domestic service includes agricultural labor or services provided by a landlord in a property they own. 
+
+Therefore, the response is: True",TRUE,statute,TRUE,TRUE,counter
+17,v1.2_02-25-2024_14-03-24,108,"Ambiguity in this context refers to the presence of uncertainty or multiple interpretations regarding the meaning of a term or phrase in a legal document.
+
+False",TRUE,statute,TRUE,TRUE,both
+18,v1.2_02-25-2024_14-03-24,283,"Ambiguity in this context refers to a situation where the language of a legal statute is unclear or capable of being understood in more than one way.
+
+In this case, the statute states that the limit is $300,000 in the case of a joint return or a surviving spouse. The fact pattern states that Alice is married for the year under section 7703 but does not file a joint return. There is ambiguity as to whether Alice qualifies as a ""surviving spouse"" as defined in section 2(a) of the statute.
+
+**True**",TRUE,statute,TRUE,TRUE,both
+19,v1.2_02-21-2024_15-04-34,243,"Ambiguity in this context means that the language of the statute is open to interpretation or has more than one potential meaning.
+
+False",FALSE,statute,TRUE,TRUE,both

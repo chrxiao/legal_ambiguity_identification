@@ -1,0 +1,67 @@
+,run,ds_ind,model_output,uncertain,uncertain_object,mult_interp,statute_lang,core_ambiguity
+0,v1.2_02-21-2024_15-04-34,283,"Ambiguity in this context refers to uncertainty or lack of clarity in the legal language used in the statute. 
+
+True",TRUE,statute,FALSE,TRUE,counter
+1,v1.2_02-24-2024_20-31-52,265,"Ambiguity in this context refers to vagueness or uncertainty in the language used in the legal statute, which could lead to differing interpretations or confusion about its meaning or application.
+
+False",TRUE,statute,TRUE,TRUE,counter
+2,v1.2_02-25-2024_14-03-24,39,"In this context, ambiguity refers to uncertainty or lack of clarity in the legal statute that could lead to different interpretations or conflicting understandings.
+
+False",TRUE,statute,TRUE,FALSE,counter
+3,v1.2_02-24-2024_20-31-52,310,"In this context, ambiguity refers to uncertainty or lack of clarity in the legal text that can lead to different interpretations or understandings.
+
+False",TRUE,statute,TRUE,FALSE,counter
+4,v1.2_02-21-2024_15-04-34,158,"Ambiguity in this context refers to a lack of clarity or uncertainty in the meaning of a legal provision or language used in a statute. 
+
+False",TRUE,statute,FALSE,TRUE,counter
+5,v1.2_02-21-2024_15-04-34,387,"Ambiguity in this context refers to any uncertainty or lack of clarity in the legal language used in the statute or fact pattern.
+
+Given the provided statute and fact pattern, the question is whether there is ambiguity present. 
+
+False",TRUE,statute,FALSE,TRUE,counter
+6,v1.2_02-25-2024_14-03-24,344,"Ambiguity in this context means uncertainty or vagueness in the language or meaning of the legal statute.
+
+False",TRUE,statute,FALSE,TRUE,counter
+7,v1.2_02-21-2024_15-04-34,194,"Ambiguity in this context refers to any confusion or lack of clarity in the legal statute or fact pattern that may lead to different interpretations or understandings of the situation.
+
+True",TRUE,"statute, facts",TRUE,FALSE,both
+8,v1.2_02-25-2024_14-03-24,252,"Ambiguity in this context relates to any uncertainty or lack of clarity in the language or provisions of the legal statute or fact pattern.
+
+False",TRUE,"statute, facts",FALSE,TRUE,counter
+9,v1.2_02-24-2024_20-31-52,457,"Ambiguity means the presence of multiple possible interpretations or meanings in a legal document.
+
+False",FALSE,statute,TRUE,FALSE,both
+10,v1.2_02-21-2024_15-04-34,176,"Ambiguity in this context refers to uncertainty or lack of clarity in the language of the statute that may lead to different interpretations or understanding of its provisions.
+
+True",TRUE,statute,TRUE,TRUE,counter
+11,v1.2_02-24-2024_20-31-52,142,"Ambiguity in legal contexts typically refers to situations where a statute or provision is unclear, vague, or open to multiple interpretations.
+
+False.",TRUE,statute,TRUE,FALSE,counter
+12,v1.2_02-21-2024_15-04-34,398,"Ambiguity in legal context generally refers to a lack of clarity or uncertainty in the language of a law or statute, which may lead to confusion or different interpretations of its meaning.
+
+In this case, the legal statute provides clear guidelines on the right to respect for private and family life, specifying that there should be no interference by a public authority except under certain circumstances. However, when applying this statute to the fact pattern provided, there is an issue of whether the interception of the applicant's phone conversation and the use of it as evidence in court violated his right to respect for private life under Article 8. 
+
+Given the discrepancy between the applicant's interpretation of the lawfulness of the interception and the response of the High Court, there is ambiguity in this case. 
+
+True",TRUE,statute,TRUE,TRUE,counter
+13,v1.2_02-24-2024_20-31-52,328,"In this context, ambiguity refers to any uncertainty or lack of clarity in the legal statute or the fact pattern presented.
+
+True",TRUE,"statute, facts",FALSE,FALSE,counter
+14,v1.2_02-24-2024_20-31-52,333,"In this context, ambiguity refers to any uncertainty or lack of clarity in the legal statute that could lead to different interpretations or understanding.
+
+False",TRUE,statute,TRUE,FALSE,counter
+15,v1.2_02-21-2024_15-04-34,24,"Ambiguity in this context refers to any unclear or uncertain language within the statute or fact pattern that could be interpreted in more than one way.
+
+False",TRUE,"statute, facts",TRUE,TRUE,counter
+16,v1.2_02-24-2024_20-31-52,420,"In this context, ambiguity would refer to any uncertainty or lack of clarity in the language of the statute or the fact pattern that could lead to different interpretations or understandings.
+
+False",TRUE,"statute, facts",TRUE,TRUE,counter
+17,v1.2_02-24-2024_20-31-52,90,"Ambiguity in this context would refer to uncertainty or lack of clarity in the legal statute or fact pattern that could lead to different interpretations or conclusions.
+
+False",TRUE,"statute, facts",TRUE,FALSE,both
+18,v1.2_02-25-2024_14-03-24,221,"In this context, ambiguity refers to uncertainty or lack of clarity in the legal provisions that may lead to different interpretations or understandings.
+
+True",TRUE,statute,TRUE,FALSE,counter
+19,v1.2_02-21-2024_15-04-34,301,"Ambiguity in this context would refer to any uncertainty or lack of clarity in the legal statute or fact pattern, specifically in relation to the rights to a fair trial outlined in the statute. 
+
+False",TRUE,"statute, facts",FALSE,FALSE,counter

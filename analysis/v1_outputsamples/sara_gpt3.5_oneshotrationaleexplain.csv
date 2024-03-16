@@ -1,0 +1,340 @@
+,run,ds_ind,model_input,statute,fact_pattern,model_output,model_output_processed,my_annotated_ambiguity_exists,is_model_correct,my_annotated_level_of_ambiguity,my_annotated_reason_for_ambiguity,ans_exp_conflict,correct_ans_exp,incorrect_ans_mistake,orig_task_attempt
+0,v1.2_02-21-2024_15-04-34,20,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (v) $79,772, plus 39.6% of the excess over $250,000 if the taxable income is over $250,000.
+Fact pattern: Alice's taxable income for the year 2017 is $210204. Alice is not married, is not a surviving spouse, and is not a head of household in 2017.
+choice: True
+choice: False
+A: False
+Explanation: Alice's taxable income is not within the range. 
+
+Statute: (a) Married individuals filing joint returns and surviving spouses <br>  <br> There is hereby imposed on the taxable income of- <br> a tax determined in accordance with the following:
+Fact pattern: Alice is a surviving spouse for the year 2017. Alice's taxable income for the year 2017 is $70117.
+choice: True
+choice: False
+A: 
+Explanation:",(a) Married individuals filing joint returns and surviving spouses <br>  <br> There is hereby imposed on the taxable income of- <br> a tax determined in accordance with the following:,Alice is a surviving spouse for the year 2017. Alice's taxable income for the year 2017 is $70117.,"True
+
+Explanation: The fact pattern clearly states that Alice is a surviving spouse, and her taxable income is provided. The statute specifically mentions that a tax is imposed on taxable income for surviving spouses, so there is no ambiguity in this case.",TRUE,FALSE,FALSE,0,Alice is a surviving spouse.,TRUE,correct,N/A,FALSE
+1,v1.2_02-25-2024_14-03-24,198,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (2) the deduction for personal exemptions provided by section 151.
+Fact pattern: In 2017, Alice was paid $33200 in remuneration. She is allowed deductions under section 63(c)(3) of $1200 for the year 2017.
+choice: True
+choice: False
+A: False
+Explanation: Alice is allowed a deduction for personal exemption under a different section.
+
+Statute:     (7) remuneration paid in any medium other than cash to an employee for service not in the course of the employer's trade or business;
+Fact pattern: Alice has been running a typewriter factory since February 1st, 2016. Bob is an employee at the typewriter factory. On October 2nd 2017, Alice has given a typewriter of value $323 to Bob in exchange for Bob painting Alice's house.
+choice: True
+choice: False
+A: 
+Explanation:",(7) remuneration paid in any medium other than cash to an employee for service not in the course of the employer's trade or business;,"Alice has been running a typewriter factory since February 1st, 2016. Bob is an employee at the typewriter factory. On October 2nd 2017, Alice has given a typewriter of value $323 to Bob in exchange for Bob painting Alice's house.","False
+
+Explanation: The fact pattern describes a barter transaction between Alice and Bob, which involves the exchange of a typewriter for painting services. This exchange does not constitute ""remuneration paid in any medium other than cash to an employee for service not in the course of the employer's trade or business."" The statute provided pertains to non-cash remuneration for services outside of the employer's normal business activities, not to barter transactions.",FALSE,FALSE,TRUE,0,Bob is Alice's employee. Alice gave Bob remuneration in a non-cash medium for a service not in Alice's business.,FALSE,incorrect,N/A,TRUE
+2,v1.2_02-24-2024_20-31-52,266,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (2) domestic service in a private home, local college club, or local chapter of a college fraternity or sorority unless performed for a person who paid cash remuneration of $1,000 or more to individuals employed in such domestic service in the calendar year or the preceding calendar year;
+Fact pattern: Alice has paid wages of $3200 in cash to Bob for domestic service done in her home from Feb 1st, 2017 to Sep 2nd, 2017, in Baltimore, Maryland, USA. The current year is 2017.
+choice: True
+choice: False
+A: False
+Explanation: Bob received cash remuneration more than $1000.
+
+Statute:     (5) Limitation on basic standard deduction in the case of certain dependents <br>  <br>    In the case of an individual with respect to whom a deduction under section 151 is allowable to another taxpayer for a taxable year beginning in the calendar year in which the individual's taxable year begins, the basic standard deduction applicable to such individual for such individual's taxable year shall not exceed the greater of-
+Fact pattern: In 2017, Alice was paid $33200. Alice and Bob have been married since Feb 3rd, 2017. Bob earned $10 in 2017. Alice and Bob file separate returns. Alice is not entitled to a deduction for Bob under section 151.
+choice: True
+choice: False
+A: 
+Explanation:","(5) Limitation on basic standard deduction in the case of certain dependents <br>  <br>    In the case of an individual with respect to whom a deduction under section 151 is allowable to another taxpayer for a taxable year beginning in the calendar year in which the individual's taxable year begins, the basic standard deduction applicable to such individual for such individual's taxable year shall not exceed the greater of-","In 2017, Alice was paid $33200. Alice and Bob have been married since Feb 3rd, 2017. Bob earned $10 in 2017. Alice and Bob file separate returns. Alice is not entitled to a deduction for Bob under section 151.","Choice: True
+
+Explanation: In this fact pattern, Alice is not entitled to a deduction for Bob under section 151. Therefore, the limitation on basic standard deduction in the case of certain dependents would not apply. Since Bob's income is only $10 in 2017, Alice's basic standard deduction would not be impacted by this provision.",TRUE,FALSE,FALSE,0,Alice is an individual to whom a deduction under the required section is not allowable.,FALSE,N/A,incorrect concl,TRUE
+3,v1.2_02-25-2024_14-03-24,96,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (B) A brother, sister, stepbrother, or stepsister.
+Fact pattern: Bob is Alice's adoptive brother since April 15th, 2014.
+choice: True
+choice: False
+A: True
+Explanation: Bob is not Alice's definitional biological brother, but he plays the role of brother as Alice's adoptive brother.
+
+Statute:     (3) Age requirements <br>  <br>    For purposes of paragraph (1)(C), an individual meets the requirements of this paragraph if such individual is younger than the taxpayer claiming such individual as a qualifying child and is less than 25 years old at the end of the taxable year.
+Fact pattern: Alice was born January 10th, 1992. Bob was born January 31st, 1984. Alice adopted Bob on March 4th, 2018. The current year is 2019.
+choice: True
+choice: False
+A: 
+Explanation:","(3) Age requirements <br>  <br>    For purposes of paragraph (1)(C), an individual meets the requirements of this paragraph if such individual is younger than the taxpayer claiming such individual as a qualifying child and is less than 25 years old at the end of the taxable year.","Alice was born January 10th, 1992. Bob was born January 31st, 1984. Alice adopted Bob on March 4th, 2018. The current year is 2019.","True
+
+Explanation: Bob was born on January 31st, 1984, making him 35 years old in the current year of 2019. Therefore, he is not less than 25 years old at the end of the taxable year.",TRUE,FALSE,FALSE,0,Both Alice and Bob are older than 25 years old.,FALSE,N/A,incorrect concl,TRUE
+4,v1.2_02-24-2024_20-31-52,234,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (iv) $31,172, plus 36% of the excess over $115,000 if the taxable income is over $115,000 but not over $250,000;
+Fact pattern: Alice's taxable income for the year 2017 is $102268. In 2017, Alice is not married, is not a surviving spouse, and is not a head of household.
+choice: True
+choice: False
+A: False
+Explanation: Alice's taxable income is not within the range. 
+
+Statute:     (2) domestic service in a private home, local college club, or local chapter of a college fraternity or sorority unless performed for a person who paid cash remuneration of $1,000 or more to individuals employed in such domestic service in the calendar year or the preceding calendar year;
+Fact pattern: Alice has paid wages of $300 in cash to Bob for domestic service in her private home from Feb 1st, 2017 to Sep 2nd, 2017. The current year is 2017.
+choice: True
+choice: False
+A: 
+Explanation:","(2) domestic service in a private home, local college club, or local chapter of a college fraternity or sorority unless performed for a person who paid cash remuneration of $1,000 or more to individuals employed in such domestic service in the calendar year or the preceding calendar year;","Alice has paid wages of $300 in cash to Bob for domestic service in her private home from Feb 1st, 2017 to Sep 2nd, 2017. The current year is 2017.","True 
+
+Explanation: The fact pattern states that Alice paid cash remuneration of $300 to Bob for domestic service in her private home. The statute specifies that the exception applies when the cash remuneration is $1,000 or more to individuals employed in such domestic service in the calendar year or the preceding calendar year. Since the cash remuneration in this case is $300, which is less than $1,000, the exception does not apply.",TRUE,FALSE,FALSE,0,"Bob performed domestic service in Alice's private home, and could not have received cash remuneration more than $1000.",FALSE,N/A,incorrect concl,TRUE
+5,v1.2_02-24-2024_20-31-52,182,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (1) Dependents ineligible <br>  <br>    If an individual is a dependent of a taxpayer for any taxable year of such taxpayer beginning in a calendar year, such individual shall be treated as having no dependents for any taxable year of such individual beginning in such calendar year.
+Fact pattern: Alice has a son, Bob, who satisfies section 152(c)(1) for the year 2015. Bob has a son, Charlie, who satisfies section 152(c)(1) for the year 2015.
+choice: True
+choice: False
+A: False
+Explanation: Based on section numbers, Bob is the dependent of a taxpayer for the taxable year. 
+
+Statute:         (B) on each of some 10 days during the calendar year or during the preceding calendar year, each day being in a different calendar week, employed at least 5 individuals in employment in agricultural labor for some portion of the day.
+Fact pattern: Bob and Cameron are agricultural managers. Dan, Emily, Fred, and George are agricultural laborers. Alice has employed Bob, Cameron, Dan, Emily, Fred and George for agricultural labor on various occasions during the year 2017: - Jan 24: Bob, Cameron, Dan, Emily and Fred - Feb 4: Bob, Cameron and Fred - Mar 3: Bob, Cameron, Dan, Emily and Fred - Mar 18: Cameron, Dan, Emily, Fred and George - Apr 1: Bob, Cameron, Dan, Fred and George - May 9: Cameron, Dan, Emily, Fred and George - Oct 14: Bob, Cameron, Dan, Emily and George - Oct 25: Bob, Emily, Fred and George - Nov 8: Bob, Cameron, Emily, Fred and George - Nov 22: Bob, Cameron, Dan, Emily and Fred - Dec 1: Bob, Cameron, Dan, Emily and George - Dec 2: Bob, Cameron, Dan, Emily and George
+choice: True
+choice: False
+A: 
+Explanation:","(B) on each of some 10 days during the calendar year or during the preceding calendar year, each day being in a different calendar week, employed at least 5 individuals in employment in agricultural labor for some portion of the day.","Bob and Cameron are agricultural managers. Dan, Emily, Fred, and George are agricultural laborers. Alice has employed Bob, Cameron, Dan, Emily, Fred and George for agricultural labor on various occasions during the year 2017: - Jan 24: Bob, Cameron, Dan, Emily and Fred - Feb 4: Bob, Cameron and Fred - Mar 3: Bob, Cameron, Dan, Emily and Fred - Mar 18: Cameron, Dan, Emily, Fred and George - Apr 1: Bob, Cameron, Dan, Fred and George - May 9: Cameron, Dan, Emily, Fred and George - Oct 14: Bob, Cameron, Dan, Emily and George - Oct 25: Bob, Emily, Fred and George - Nov 8: Bob, Cameron, Emily, Fred and George - Nov 22: Bob, Cameron, Dan, Emily and Fred - Dec 1: Bob, Cameron, Dan, Emily and George - Dec 2: Bob, Cameron, Dan, Emily and George","False
+
+Explanation: The statute requires that the individual be employed at least 5 individuals in agricultural labor on each of some 10 days during the calendar year or the preceding calendar year, with each day being in a different calendar week. The fact pattern provided does not specify that Bob and Cameron each employed at least 5 individuals on each of some 10 days meeting these criteria. Therefore, there is ambiguity in determining if the statute requirements are met.",FALSE,FALSE,TRUE,0,"Regardless of whether agricultural managing counts as agricultural labor, Alice has not employed at least 5 individuals on each of these 10 days.",TRUE,N/A,"unusual def, incorrect concl",FALSE
+6,v1.2_02-21-2024_15-04-34,130,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (ii) $5,535, plus 28% of the excess over $36,900 if the taxable income is over $36,900 but not over $89,150;
+Fact pattern: Alice is a surviving spouse for the year 2017. Alice's taxable income for the year 2017 is $70117.
+choice: True
+choice: False
+A: False
+Explanation: Alice's taxable income is within the range.
+
+Statute:         (H) An individual (other than an individual who at any time during the taxable year was the spouse, determined without regard to section 7703, of the taxpayer) who, for the taxable year of the taxpayer, has the same principal place of abode as the taxpayer and is a member of the taxpayer's household.
+Fact pattern: Alice and Bob started living together on April 15th, 2014. Alice and Bob are not married. The current year is 2018.
+choice: True
+choice: False
+A: 
+Explanation:","(H) An individual (other than an individual who at any time during the taxable year was the spouse, determined without regard to section 7703, of the taxpayer) who, for the taxable year of the taxpayer, has the same principal place of abode as the taxpayer and is a member of the taxpayer's household.","Alice and Bob started living together on April 15th, 2014. Alice and Bob are not married. The current year is 2018.","True.
+Explanation: The fact pattern clearly states that Alice and Bob are not married, so Alice does not meet the requirement of being the spouse of the taxpayer. Regardless of other details, this is a clear and unambiguous situation.",TRUE,FALSE,FALSE,0,"Alice and Bob are not spouses. During this year, they have had the same principal place of abode and been members of the same household.",TRUE,correct,N/A,FALSE
+7,v1.2_02-25-2024_14-03-24,225,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (6) service performed in the employ of the United States Government
+Fact pattern: Alice was paid $73200 in 2017 as an employee of the Virginia State Government in Arlington, Virginia, USA.
+choice: True
+choice: False
+A: True
+Explanation: It's not clear whether the statute intends U.S. Government to mean federal government only, or to include state and local governments.
+
+Statute:     (13) service performed as a student nurse in the employ of a hospital or a nurses' training school by an individual who is enrolled and is regularly attending classes in a nurses' training school;
+Fact pattern: Alice was paid $3200 in 2017 for services performed as a student nurse for Johns Hopkins School of Nursing. Alice was enrolled at Johns Hopkins School of Nursing and attending classes from August 29, 2015 to May 30th, 2019.
+choice: True
+choice: False
+A: 
+Explanation:",(13) service performed as a student nurse in the employ of a hospital or a nurses' training school by an individual who is enrolled and is regularly attending classes in a nurses' training school;,"Alice was paid $3200 in 2017 for services performed as a student nurse for Johns Hopkins School of Nursing. Alice was enrolled at Johns Hopkins School of Nursing and attending classes from August 29, 2015 to May 30th, 2019.","False
+
+Explanation: There is no ambiguity in this statute. It clearly states that the service performed must be as a student nurse in the employ of a hospital or nurses' training school, by an individual who is enrolled and regularly attending classes in a nurses' training school. The fact pattern provided matches all the criteria outlined in the statute.",FALSE,FALSE,TRUE,0,"Alice is employed as a student nurse, enrolled, and regularly attending classes at a nurses' training school.",FALSE,correct,N/A,FALSE
+8,v1.2_02-21-2024_15-04-34,21,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (H) An individual (other than an individual who at any time during the taxable year was the spouse, determined without regard to section 7703, of the taxpayer) who, for the taxable year of the taxpayer, has the same principal place of abode as the taxpayer and is a member of the taxpayer's household.
+Fact pattern: Bob is Alice's father since April 15th, 1994. In 2015, Alice and Bob live in separate houses. The current year is 2018.
+choice: True
+choice: False
+A: False
+Explanation: Alice and Bob live in separate houses.
+
+Statute:     (v) $75,528.50, plus 39.6% of the excess over $250,000 if the taxable income is over $250,000.
+Fact pattern: Alice is a surviving spouse for the year 2017. Alice's taxable income for the year 2017 is $25561.
+choice: True
+choice: False
+A: 
+Explanation:","(v) $75,528.50, plus 39.6% of the excess over $250,000 if the taxable income is over $250,000.",Alice is a surviving spouse for the year 2017. Alice's taxable income for the year 2017 is $25561.,"False
+
+Explanation: The fact pattern states that Alice's taxable income is $25,561, which is below the $250,000 threshold mentioned in the statute. Therefore, the tax calculation for Alice's income should only be $75,528.50. The additional 39.6% would not be applicable in this case.",FALSE,FALSE,TRUE,0,Alice's taxable income is not within the range.,FALSE,irrelevant,N/A,TRUE
+9,v1.2_02-21-2024_15-04-34,3,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (F) A brother or sister of the father or mother of the taxpayer.
+Fact pattern: Charlie is Bob's father since April 15th, 2014. Alice is Charlie's sister since October 12th, 1992.
+choice: True
+choice: False
+A: False
+Explanation: Alice is Bob's aunt.
+
+Statute:     (ii) $5,535, plus 28% of the excess over $36,900 if the taxable income is over $36,900 but not over $89,150;
+Fact pattern: Alice is married under section 7703 for the year 2017. Alice files a joint return with her spouse for 2017. Alice's and her spouse's taxable income for the year 2017 is $42876.
+choice: True
+choice: False
+A: 
+Explanation:","(ii) $5,535, plus 28% of the excess over $36,900 if the taxable income is over $36,900 but not over $89,150;",Alice is married under section 7703 for the year 2017. Alice files a joint return with her spouse for 2017. Alice's and her spouse's taxable income for the year 2017 is $42876.,"False
+
+Explanation: The fact pattern provides the taxable income for Alice and her spouse, which falls within the range specified in the statute. Therefore, there is no ambiguity in this case.",FALSE,FALSE,TRUE,0,Alice's taxable income is within the range.,FALSE,correct,N/A,FALSE
+10,v1.2_02-25-2024_14-03-24,245,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (A) performed by an employee for the person employing him, irrespective of the citizenship or residence of either, within the United States, and
+Fact pattern: Alice has paid $3200 to Bob for work done from Feb 1st, 2017 to Sep 2nd, 2017, in Baltimore, Maryland, USA.
+choice: True
+choice: False
+A: False
+Explanation: Bob worked in the U.S. Alice paid him for his services.
+
+Statute:     (7) service performed in the employ of a State, or any political subdivision thereof.
+Fact pattern: Alice was paid $73200 in 2017 as an employee of Palantir, which contracts with the State of Maryland, in Baltimore, Maryland, USA.
+choice: True
+choice: False
+A: 
+Explanation:","(7) service performed in the employ of a State, or any political subdivision thereof.","Alice was paid $73200 in 2017 as an employee of Palantir, which contracts with the State of Maryland, in Baltimore, Maryland, USA.","False
+
+Explanation: The fact pattern states that Alice was an employee of Palantir, a company that contracts with the State of Maryland. Thus, Alice was not directly employed by the State of Maryland or any political subdivision thereof, as specified in the statute.",FALSE,TRUE,FALSE,1,"As a contractor, Alice technically performed a service for the employ of the State, but this is not what is usually meant by the phrase “in the employ.”",FALSE,N/A,overlook,FALSE
+11,v1.2_02-24-2024_20-31-52,9,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (D) A stepfather or stepmother.
+Fact pattern: Charlie is Bob's father since April 15th, 1995. Dorothy is Bob's mother. Alice married Charlie on August 8th, 2018.
+choice: True
+choice: False
+A: False
+Explanation: Alice is Bob's stepmother.
+
+Statute:     (v) $75,528.50, plus 39.6% of the excess over $250,000 if the taxable income is over $250,000.
+Fact pattern: Alice is married under section 7703 for the year 2017. Alice files a joint return with her spouse for 2017. Alice's and her spouse's taxable income for the year 2017 is $17330.
+choice: True
+choice: False
+A: 
+Explanation:","(v) $75,528.50, plus 39.6% of the excess over $250,000 if the taxable income is over $250,000.",Alice is married under section 7703 for the year 2017. Alice files a joint return with her spouse for 2017. Alice's and her spouse's taxable income for the year 2017 is $17330.,"False
+
+Explanation: The fact pattern states that Alice and her spouse's taxable income for the year 2017 is $17,330. Since this income is less than $250,000, the specified rate and amount from the statute do not apply.",FALSE,FALSE,TRUE,0,Alice's taxable income is not within the range.,FALSE,correct,N/A,FALSE
+12,v1.2_02-25-2024_14-03-24,8,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:             (i) by a student who is enrolled and is regularly attending classes at such school, college, or university, or
+Fact pattern: Alice was paid $3200 in 2017 for services performed for Johns Hopkins University. Alice was enrolled at Johns Hopkins University from August 29, 2015 to May 30th, 2019. Alice mostly skips class.
+choice: True
+choice: False
+A: True
+Explanation: Alice is enrolled, but technically is not regularly attending classes at her university. However, most would interpret “regularly attending classes” more as enrolling in classes. They would not consider Alice's choice to skip class as barring her from this definition. 
+
+Statute: (a) Married individuals filing joint returns and surviving spouses <br>  <br> There is hereby imposed on the taxable income of- <br> a tax determined in accordance with the following:
+Fact pattern: Alice is married under section 7703 for the year 2017. Alice files a joint return with her spouse for 2017. Alice's and her husband's taxable income for the year 2017 is $17330.
+choice: True
+choice: False
+A: 
+Explanation:",(a) Married individuals filing joint returns and surviving spouses <br>  <br> There is hereby imposed on the taxable income of- <br> a tax determined in accordance with the following:,Alice is married under section 7703 for the year 2017. Alice files a joint return with her spouse for 2017. Alice's and her husband's taxable income for the year 2017 is $17330.,"True
+
+Explanation: In this fact pattern, Alice is married and filing a joint return with her spouse for the year 2017. The statute imposes a tax on married individuals filing joint returns, which aligns with Alice's situation. Being married and filing a joint return satisfies the requirement of the statute.",TRUE,FALSE,FALSE,0,Alice is a married individual filing a joint return.,FALSE,N/A,incorrect concl,TRUE
+13,v1.2_02-21-2024_15-04-34,183,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:             (i) during the calendar year or the preceding calendar year paid remuneration in cash of $20,000 or more to individuals employed in agricultural labor (including labor performed by an alien referred to in subparagraph (B)), or
+Fact pattern: Alice has paid $2300 in remuneration in cash to Bob for managing an agricultural business she owns in Caracas, Venezuela, from Feb 1st, 2017 to Sep 2nd, 2017. Alice and Bob are both American citizens. The current year is 2017.
+choice: True
+choice: False
+A: False
+Explanation: Regardless of whether agricultural managing counts as agricultural labor, during the current year, Alice has not paid more than $20000 to Bob for agricultural labor.
+
+Statute:         (B) on each of some 10 days during the calendar year or during the preceding calendar year, each day being in a different calendar week, employed at least 5 individuals in employment in agricultural labor for some portion of the day.
+Fact pattern: Alice has employed Bob, Cameron, Dan, Emily, Fred and George for agricultural labor on various occasions during the year 2017: - Jan 24: Bob, Cameron, Dan, Emily and Fred - Feb 4: Bob, Cameron, Dan, Emily and Fred - Mar 3: Bob, Cameron, Dan, Emily and Fred - Mar 18: Cameron, Dan, Emily, Fred and George - Apr 1: Bob, Cameron, Dan, Fred and George - May 9: Cameron, Dan, Emily, Fred and George - Oct 14: Bob, Cameron, Dan, Emily and George - Oct 25: Bob, Cameron, Dan, Emily, Fred and George - Nov 8: Bob, Cameron, Emily, Fred and George - Nov 22: Bob, Cameron, Dan, Emily and Fred - Dec 1: Bob, Cameron, Dan, Emily and George - Dec 2: Bob, Cameron, Dan, Emily and George
+choice: True
+choice: False
+A: 
+Explanation:","(B) on each of some 10 days during the calendar year or during the preceding calendar year, each day being in a different calendar week, employed at least 5 individuals in employment in agricultural labor for some portion of the day.","Alice has employed Bob, Cameron, Dan, Emily, Fred and George for agricultural labor on various occasions during the year 2017: - Jan 24: Bob, Cameron, Dan, Emily and Fred - Feb 4: Bob, Cameron, Dan, Emily and Fred - Mar 3: Bob, Cameron, Dan, Emily and Fred - Mar 18: Cameron, Dan, Emily, Fred and George - Apr 1: Bob, Cameron, Dan, Fred and George - May 9: Cameron, Dan, Emily, Fred and George - Oct 14: Bob, Cameron, Dan, Emily and George - Oct 25: Bob, Cameron, Dan, Emily, Fred and George - Nov 8: Bob, Cameron, Emily, Fred and George - Nov 22: Bob, Cameron, Dan, Emily and Fred - Dec 1: Bob, Cameron, Dan, Emily and George - Dec 2: Bob, Cameron, Dan, Emily and George","False
+
+Explanation: The fact pattern shows that Alice employed at least 5 individuals in agricultural labor on 11 different days during the year 2017, which exceeds the requirement of employing 5 individuals on 10 different days in a different calendar week. The statute is clear and there is no ambiguity in this case.",FALSE,FALSE,TRUE,0,Alice has employed at least 5 individuals on each of these 10 days.,FALSE,correct,N/A,FALSE
+14,v1.2_02-24-2024_20-31-52,255,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (v) $77,485, plus 39.6% of the excess over $250,000 if the taxable income is over $250,000.
+Fact pattern: Alice is a head of household for the year 2017. Alice's taxable income for the year 2017 is $1172980.
+choice: True
+choice: False
+A: False
+Explanation: Alice's taxable income is within the range.
+
+Statute: (b) Individuals who do not itemize their deductions <br>  <br> In the case of an individual who does not elect to itemize his deductions for the taxable year, for purposes of this subtitle, the term ""taxable income"" means adjusted gross income, minus-
+Fact pattern: In 2017, Alice was paid $33200. She is allowed a deduction under section 63(c)(1) of $2000 for the year 2017, and no deduction under section 151. Alice takes the standard deduction.
+choice: True
+choice: False
+A: 
+Explanation:","(b) Individuals who do not itemize their deductions <br>  <br> In the case of an individual who does not elect to itemize his deductions for the taxable year, for purposes of this subtitle, the term ""taxable income"" means adjusted gross income, minus-","In 2017, Alice was paid $33200. She is allowed a deduction under section 63(c)(1) of $2000 for the year 2017, and no deduction under section 151. Alice takes the standard deduction.","False
+
+Explanation: The fact pattern provides information about Alice's income and deductions, but it does not mention whether she itemizes her deductions or not. Since the statute applies only to individuals who do not itemize their deductions, there is ambiguity in this case which makes the statement false.",FALSE,FALSE,TRUE,0,Alice decides to itemize her deductions.,FALSE,incorrect,N/A,TRUE
+15,v1.2_02-25-2024_14-03-24,95,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (6) service performed in the employ of the United States Government
+Fact pattern: Alice was paid $73200 in 2017 as an employee of the United States Government in Arlington, Virginia, USA.
+choice: True
+choice: False
+A: False
+Explanation: Alice was employed by the U.S. Government.
+
+Statute:         (B) a brother, sister, stepbrother, or stepsister of the taxpayer or a descendant of any such relative.
+Fact pattern: Alice has a foster brother, Bob, who was born January 31st, 2014.
+choice: True
+choice: False
+A: 
+Explanation:","(B) a brother, sister, stepbrother, or stepsister of the taxpayer or a descendant of any such relative.","Alice has a foster brother, Bob, who was born January 31st, 2014.","False
+
+Explanation: The statute specifically mentions ""brother, sister, stepbrother, or stepsister"" as qualifying relatives, so Bob as a foster brother does not meet the criteria outlined in the statute.",FALSE,TRUE,FALSE,2,"It's unclear whether fostering counts as a sibling relationship, as fostering is a temporary placement.",FALSE,N/A,overlook,FALSE
+16,v1.2_02-25-2024_14-03-24,278,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (7) service performed in the employ of a State, or any political subdivision thereof.
+Fact pattern: Alice was paid $73200 in 2017 as an employee of Bertha's Mussels in Baltimore, Maryland, USA.
+choice: True
+choice: False
+A: False
+Explanation: Alice was not an employee of a State.
+
+Statute:         (A) for himself if he is blind at the close of the taxable year, and
+Fact pattern: In 2017, Alice was paid $33200. Alice and Bob have been married since Feb 3rd, 2017. Alice has been blind since March 20, 2016. As of November 20, 2017, Alice has began to regain some vision. The current year is 2017.
+choice: True
+choice: False
+A: 
+Explanation:","(A) for himself if he is blind at the close of the taxable year, and","In 2017, Alice was paid $33200. Alice and Bob have been married since Feb 3rd, 2017. Alice has been blind since March 20, 2016. As of November 20, 2017, Alice has began to regain some vision. The current year is 2017.","False
+
+Explanation: The statutory language is clear that the exception is for an individual who is blind at the close of the taxable year. Since Alice began to regain some vision by November 20, 2017, she would not meet the statutory requirement of being blind at the close of the taxable year.",FALSE,TRUE,FALSE,2,It depends on the statute's intention for blind people.,FALSE,N/A,overlook,FALSE
+17,v1.2_02-21-2024_15-04-34,215,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (B) A brother, sister, stepbrother, or stepsister.
+Fact pattern: Bob is Alice's brother since April 15th, 2014.
+choice: True
+choice: False
+A: False
+Explanation: Bob is Alice's brother.
+
+Statute:             (ii) by the spouse of such a student, or
+Fact pattern: Alice's father, Bob, was paid $3200 in 2017 for services performed for Johns Hopkins University. Alice was enrolled at Johns Hopkins University and attending classes from August 29, 2015 to May 30th, 2019.
+choice: True
+choice: False
+A: 
+Explanation:","(ii) by the spouse of such a student, or","Alice's father, Bob, was paid $3200 in 2017 for services performed for Johns Hopkins University. Alice was enrolled at Johns Hopkins University and attending classes from August 29, 2015 to May 30th, 2019.","False
+
+Explanation: In this case, there is ambiguity. While Alice's father is not explicitly stated to be the spouse of Alice (as per the statute), the fact pattern does not clarify this relationship. It is unclear if ""spouse"" in the statue refers only to a husband or wife, or if it could encompass a father-daughter relationship as well. Further information is needed to determine if there is a conflict between the statute and the fact pattern.",FALSE,FALSE,TRUE,0,The fact pattern does not mention any spouses of students.,TRUE,N/A,"unusual def, lack info",FALSE
+18,v1.2_02-25-2024_14-03-24,62,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (B) who maintains as his home a household which constitutes for the taxable year the principal place of abode (as a member of such household) of a dependent (i) who (within the meaning of section 152) is a son, stepson, daughter, or stepdaughter of the taxpayer, and (ii) with respect to whom the taxpayer is entitled to a deduction for the taxable year under section 151.
+Fact pattern: Alice and Bob got married on Feb 3rd, 1992. Alice and Bob adopt a child, Charlie, born October 9th, 2000. Alice died on July 9th, 2014. From 2004 to 2017, Bob furnished the costs of maintaining the home where he and Charlie lived during that time. From 2014 to 2017, Bob was entitled to a deduction for Charlie under section 151. Bob's income in 2016 was $553252. The current year is 2016.
+choice: True
+choice: False
+A: True
+Explanation: Charlie is not Bob's definitional biological child, but he plays the role of child as Bob's adoptive child.
+
+Statute:     (2) Exemption amount disallowed in case of certain dependents <br>  <br>    In the case of an individual with respect to whom a deduction under this section is allowable to another taxpayer for a taxable year beginning in the calendar year in which the individual's taxable year begins, the exemption amount applicable to such individual for such individual's taxable year shall be zero.
+Fact pattern: Alice is entitled to an exemption under section 151(d) for Bob for the year 2015.
+choice: True
+choice: False
+A: 
+Explanation:","(2) Exemption amount disallowed in case of certain dependents <br>  <br>    In the case of an individual with respect to whom a deduction under this section is allowable to another taxpayer for a taxable year beginning in the calendar year in which the individual's taxable year begins, the exemption amount applicable to such individual for such individual's taxable year shall be zero.",Alice is entitled to an exemption under section 151(d) for Bob for the year 2015.,"False
+
+Explanation: In this fact pattern, Alice is entitled to an exemption for Bob under section 151(d) for the year 2015. The statute mentioned is related to the exemption amount being disallowed for certain dependents if a deduction is allowable to another taxpayer for a taxable year beginning in the same calendar year. This fact pattern does not involve the situation described in the statute, so there is no ambiguity.",FALSE,FALSE,TRUE,0,"Bob is an individual with respect to whom a deduction is allowable to another taxpayer, Alice.",FALSE,incorrect,N/A,FALSE
+19,v1.2_02-24-2024_20-31-52,230,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute: (b) Wages <br>  <br> For purposes of this chapter, the term ""wages"" means all remuneration for employment, including the cash value of all remuneration (including benefits) paid in any medium other than cash
+Fact pattern:  except that such term shall not include-
+choice: True
+choice: False
+A: True
+Explanation: Technically, Alice has employed Bob by paying him for his services. However, most would not read this relationship as employment.
+
+Statute:     (16) service performed in the employ of an international organization;
+Fact pattern: Alice was paid $73200 in 2017 as an employee of Toyota.
+choice: True
+choice: False
+A: 
+Explanation:",(16) service performed in the employ of an international organization;,Alice was paid $73200 in 2017 as an employee of Toyota.,"Choice: False
+
+Explanation: There is no ambiguity in this scenario. The fact pattern clearly states that Alice was paid by Toyota as an employee, not as an employee of an international organization.",FALSE,TRUE,FALSE,1,"Toyota is technically an international organization, but as a for-profit company, it is not what people usually mean when they say international organization.",FALSE,N/A,overlook,FALSE

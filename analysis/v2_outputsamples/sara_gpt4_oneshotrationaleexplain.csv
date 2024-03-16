@@ -1,0 +1,321 @@
+,run,ds_ind,model_input,statute,fact_pattern,model_output,model_output_processed,my_annotated_ambiguity_exists,is_model_correct,my_annotated_level_of_ambiguity,my_annotated_reason_for_ambiguity,ans_exp_conflict,correct_ans_exp,incorrect_ans_mistake,orig_task_attempt
+0,v2_02-25-2024_02-25-27,5,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (B) maintains a household which constitutes for such taxable year the principal place of abode of the father or mother of the taxpayer, if the taxpayer is entitled to a deduction for the taxable year for such father or mother under section 151.
+Fact pattern: Alice and Bob got married on Feb 3rd, 1992. Alice died on July 9th, 2014. From 2004 to 2019, Bob furnished the costs of maintaining the home where he and his father Charlie lived during that time. Bob is entitled to a deduction for Charlie under section 151(c) for the years 2015 to 2019. The current year is 2018.
+choice: True
+choice: False
+A: False
+Explanation: Bob furnishes costs of maintaining a household where he lives with his father. 
+
+Statute:     (iii) $20,165, plus 31% of the excess over $89,150 if the taxable income is over $89,150 but not over $140,000;
+Fact pattern: Alice is married under section 7703 for the year 2017. Alice files a joint return with her spouse for 2017. Alice's and her spouse's taxable income for the year 2017 is $103272.
+choice: True
+choice: False
+A: 
+Explanation:","(iii) $20,165, plus 31% of the excess over $89,150 if the taxable income is over $89,150 but not over $140,000;",Alice is married under section 7703 for the year 2017. Alice files a joint return with her spouse for 2017. Alice's and her spouse's taxable income for the year 2017 is $103272.,"True
+Explanation: The statute provides a formula for calculating tax based on taxable income but does not specify how it applies to those who are married and filing jointly. Given Alice's marital status and that she is filing jointly, there could be ambiguity regarding how her combined taxable income with her spouse fits into the brackets defined by the statute, especially since tax brackets can differ for single filers versus joint filers. However, the statute does not mention or differentiate based on filing status, leading to potential ambiguity in application to married individuals filing jointly.",TRUE,FALSE,FALSE,0,Alice's taxable income is within the range.,FALSE,N/A,lack info,FALSE
+1,v2_02-21-2024_23-34-56,30,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:             (i) by a student who is enrolled and is regularly attending classes at such school, college, or university, or
+Fact pattern: Alice was paid $3200 in 2017 for services performed for Johns Hopkins University. Alice was enrolled at Johns Hopkins University and attending classes from August 27, 2011 to May 29th, 2016. The current year is 2017.
+choice: True
+choice: False
+A: False
+Explanation: By the current year, Alice is no longer enrolled and regularly attending classes at university. 
+
+Statute:     (iv) $33,385, plus 36% of the excess over $127,500 if the taxable income is over $127,500 but not over $250,000;
+Fact pattern: Alice is a head of household for the year 2017. Alice's taxable income for the year 2017 is $194512.
+choice: True
+choice: False
+A: 
+Explanation:","(iv) $33,385, plus 36% of the excess over $127,500 if the taxable income is over $127,500 but not over $250,000;",Alice is a head of household for the year 2017. Alice's taxable income for the year 2017 is $194512.,"False
+Explanation: There is no legal ambiguity in applying the statute to the fact pattern. Alice's taxable income for the year 2017 falls within the specified range of over $127,500 but not over $250,000. Therefore, according to the statute, her tax calculation would include $33,385 plus 36% of the excess over $127,500, which directly applies to her situation without ambiguity.",FALSE,FALSE,TRUE,0,Alice's taxable income is within the range.,FALSE,correct,N/A,FALSE
+2,v2_02-25-2024_21-50-51,301,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (B) service performed in the employ of a hospital, if such service is performed by a patient of such hospital;
+Fact pattern: Alice was paid $200 in March 2017 for services performed at Johns Hopkins Hospital in March 2017. Alice was a patient at Johns Hopkins Hospital from March 15th, 2017 to April 2nd, 2017.
+choice: True
+choice: False
+A: False
+Explanation: Alice performed services for the hospital, while being a patient.
+
+Statute:     (2) an individual legally separated from his spouse under a decree of divorce or of separate maintenance shall not be considered as married.
+Fact pattern: Alice and Bob got married on April 5th, 2012. Alice and Bob are now nearing the end of the legal separation process. Alice pays alimony. 
+choice: True
+choice: False
+A: 
+Explanation:",(2) an individual legally separated from his spouse under a decree of divorce or of separate maintenance shall not be considered as married.,"Alice and Bob got married on April 5th, 2012. Alice and Bob are now nearing the end of the legal separation process. Alice pays alimony.","True
+Explanation: The statute specifies that an individual legally separated under a decree of divorce or separate maintenance is not considered as married. However, the fact pattern mentions that Alice and Bob are nearing the end of the legal separation process, which implies they have not yet obtained a decree of divorce or separate maintenance. Therefore, whether Alice and Bob are considered married or not under this statute is ambiguous until the legal separation process is finalized with a decree.",TRUE,TRUE,TRUE,2,"Alice and Bob technically do not meet the definition of legally separated yet. But they are very close to doing so, and Alice paying alimony is very analogous to separate maintenance.",FALSE,correct,N/A,FALSE
+3,v2_02-25-2024_21-50-51,259,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (A) if the taxpayer has remarried at any time before the close of the taxable year, or
+Fact pattern: Alice and Bob got married on Feb 3rd, 1992. Alice died on July 9th, 2014. Bob married Charlie on September 14th, 2015. The current year is 2015.
+choice: True
+choice: False
+A: False
+Explanation: Bob remarried before the end of year.
+
+Statute:             (i) a joint return, or
+Fact pattern: In 2017, Alice was paid $33200 in remuneration. Alice and Bob have been married since Feb 3rd, 2017. Alice and Bob file separate returns in 2017.
+choice: True
+choice: False
+A: 
+Explanation:","(i) a joint return, or","In 2017, Alice was paid $33200 in remuneration. Alice and Bob have been married since Feb 3rd, 2017. Alice and Bob file separate returns in 2017.","False
+Explanation: The statute mentions the possibility of filing a joint return, but the fact pattern specifically states that Alice and Bob, despite being married within the relevant tax year, chose to file separate returns. There is no ambiguity about whether the circumstances described in the fact pattern meet or contradict the statute as the statute allows for a joint return but does not mandate it, and the fact pattern does not suggest any confusion or conflict with this stipulation.",FALSE,FALSE,TRUE,0,The fact pattern does not mention a joint return.,FALSE,correct,N/A,FALSE
+4,v2_02-21-2024_23-34-56,79,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (B) maintains a household which constitutes for such taxable year the principal place of abode of the father or mother of the taxpayer, if the taxpayer is entitled to a deduction for the taxable year for such father or mother under section 151.
+Fact pattern: Alice and Bob got married on Feb 3rd, 1992. Alice died on July 9th, 2014. From 2004 to 2019, Bob furnished the costs of maintaining the home where he and his father Charlie lived during that time. Bob is entitled to a deduction for Charlie under section 151(c) for the years 2015 to 2019. The current year is 2018.
+choice: True
+choice: False
+A: False
+Explanation: Bob furnishes costs of maintaining a household where he lives with his father. 
+
+Statute:         (E) who has not filed a joint return (other than only for a claim of refund) with the individual's spouse for the taxable year beginning in the calendar year in which the taxable year of the taxpayer begins.
+Fact pattern: Alice has a son, Bob. From September 1st, 2015 to November 3rd, 2019, Alice and Bob lived in the same home. Bob married Charlie on October 23rd, 2018. Bob and Charlie file separate returns. The current year is 2019.
+choice: True
+choice: False
+A: 
+Explanation:",(E) who has not filed a joint return (other than only for a claim of refund) with the individual's spouse for the taxable year beginning in the calendar year in which the taxable year of the taxpayer begins.,"Alice has a son, Bob. From September 1st, 2015 to November 3rd, 2019, Alice and Bob lived in the same home. Bob married Charlie on October 23rd, 2018. Bob and Charlie file separate returns. The current year is 2019.","False
+Explanation: Bob's decision to file separate returns from Charlie, as mentioned in the fact pattern, directly aligns with the stipulation of the statute that an individual must not have filed a joint return (other than only for a claim of refund) with their spouse for the taxable year. Since Bob and Charlie have filed separate returns for the current year (2019), there is no ambiguity regarding the application of this statute to the fact pattern provided.",FALSE,FALSE,TRUE,0,Bob and Charlie are spouses but file separate returns.,FALSE,correct,N/A,FALSE
+5,v2_02-25-2024_02-25-27,16,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (iv) $35,928.50, plus 36% of the excess over $140,000 if the taxable income is over $140,000 but not over $250,000;
+Fact pattern: Alice is married under section 7703 for the year 2017. Alice files a joint return with her spouse for 2017. Alice's and her spouse's taxable income for the year 2017 is $684642.
+choice: True
+choice: False
+A: False
+Explanation: Alice's taxable income is not within the range. 
+
+Statute:     (iii) $20,165, plus 31% of the excess over $89,150 if the taxable income is over $89,150 but not over $140,000;
+Fact pattern: Alice is a surviving spouse for the year 2017. Alice's taxable income for the year 2017 is $95129.
+choice: True
+choice: False
+A: 
+Explanation:","(iii) $20,165, plus 31% of the excess over $89,150 if the taxable income is over $89,150 but not over $140,000;",Alice is a surviving spouse for the year 2017. Alice's taxable income for the year 2017 is $95129.,"True
+Explanation: Alice's taxable income falls within the specified range of $89,150 to $140,000, which makes it applicable to calculate the tax using the given statute. However, her status as a surviving spouse is not directly relevant to the applicability of this specific tax rate and bracket. Therefore, the calculation of tax based on her income fitting into this bracket is straightforward, but considerations related to her filing status might introduce some ambiguity regarding the overall tax implications or specific deductions she might be entitled to, which are not addressed in the provided statute.",TRUE,FALSE,FALSE,0,Alice's taxable income is within the range.,FALSE,N/A,lack info,FALSE
+6,v2_02-25-2024_02-25-27,160,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (A) A child or a descendant of a child.
+Fact pattern: Bob is Alice's foster brother since April 15th, 2014.
+choice: True
+choice: False
+A: False
+Explanation: The fact pattern does not mention any children.
+
+Statute:         (A) an individual who is legally separated from his spouse under a decree of divorce or of separate maintenance shall not be considered as married;
+Fact pattern: Alice and Bob got married on Feb 3rd, 1992. In 2018, Alice and Bob start the legal separation process. The current year is 2010.
+choice: True
+choice: False
+A: 
+Explanation:",(A) an individual who is legally separated from his spouse under a decree of divorce or of separate maintenance shall not be considered as married;,"Alice and Bob got married on Feb 3rd, 1992. In 2018, Alice and Bob start the legal separation process. The current year is 2010.","False
+Explanation: The fact pattern provided contains an error in the timeline, which makes it unclear how to apply the statute regarding legal separation and its impact on marital status. Since the current year is stated as 2010 but the legal separation began in 2018, this inconsistency makes temporal interpretation impossible, rather than creating legal ambiguity in the application of the statute itself. The statute clearly states that legal separation affects how one is considered in terms of being married, but the provided timeline error does not impact this clear distinction.",FALSE,FALSE,TRUE,0,"During the current year, Alice and Bob have not yet started the legal separation process.",FALSE,correct,N/A,FALSE
+7,v2_02-25-2024_02-25-27,118,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (A) A child or a descendant of a child.
+Fact pattern: Bob is Alice's biological brother, born April 15th, 2014, and subsequently given up for adoption.
+choice: True
+choice: False
+A: False
+Explanation: The fact pattern does not mention any children.
+
+Statute:         (C) The father or mother, or an ancestor of either.
+Fact pattern: Bob is Alice's son since April 15th, 2014.
+choice: True
+choice: False
+A: 
+Explanation:","(C) The father or mother, or an ancestor of either.","Bob is Alice's son since April 15th, 2014.","False
+Explanation: The statute refers to a person's parent or ancestor of the parent as relevant parties. The fact pattern identifies Bob as Alice's son, placing Alice in the position of mother. There is no ambiguity in applying the statute to this fact pattern, as it explicitly includes mothers in its language, and Alice fits this category with respect to Bob.",FALSE,FALSE,TRUE,0,Alice is Bob's mother.,FALSE,correct,N/A,FALSE
+8,v2_02-25-2024_21-50-51,166,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (2) domestic service in a private home, local college club, or local chapter of a college fraternity or sorority unless performed for a person who paid cash remuneration of $1,000 or more to individuals employed in such domestic service in the calendar year or the preceding calendar year;
+Fact pattern: Alice has paid wages of $300 in cash to Bob for domestic service in her private home from Feb 1st, 2017 to Sep 2nd, 2017. The current year is 2017.
+choice: True
+choice: False
+A: False
+Explanation: Bob performed domestic service in Alice's private home, and could not have received cash remuneration more than $1000.
+
+Statute:         (B) a taxpayer shall be considered as not married at the close of his taxable year if at any time during the taxable year his spouse is a nonresident alien; and
+Fact pattern: Alice and Bob got married on Feb 3rd, 1992. Alice was a nonresident alien until July 9th, 2014. The current year is 2015.
+choice: True
+choice: False
+A: 
+Explanation:",(B) a taxpayer shall be considered as not married at the close of his taxable year if at any time during the taxable year his spouse is a nonresident alien; and,"Alice and Bob got married on Feb 3rd, 1992. Alice was a nonresident alien until July 9th, 2014. The current year is 2015.","False
+Explanation: The statute specifies conditions for the taxpayer being considered not married for tax purposes and explicitly mentions the status during the taxable year. Since Alice was a nonresident alien up to July 9th, 2014, and the current year is 2015, throughout which she presumably has resident status or citizenship, the condition specified in the statute does not apply. Thus, there is no legal ambiguity in applying the statute to the given fact pattern because Alice's nonresident alien status does not coincide with the taxable year in question.",FALSE,FALSE,TRUE,0,"During the taxable year, Alice is no longer a nonresident alien.",FALSE,correct,N/A,FALSE
+9,v2_02-25-2024_02-25-27,54,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (iv) $17,964.25, plus 36% of the excess over $70,000 if the taxable income is over $70,000 but not over $125,000;
+Fact pattern: Alice is married under section 7703 for the year 2017. Alice's taxable income for the year 2017 is $28864. Alice files a separate return.
+choice: True
+choice: False
+A: False
+Explanation: Alice's taxable income is not within the range. 
+
+Statute: (d) Married individuals filing separate returns <br>  <br> There is hereby imposed on the taxable income of every married individual (as defined in section 7703) who does not make a single return jointly with his spouse, a tax determined in accordance with the following:
+Fact pattern: Alice is married under section 7703 for the year 2017. Alice's taxable income for the year 2017 is $554313. Alice files a separate return.
+choice: True
+choice: False
+A: 
+Explanation:","(d) Married individuals filing separate returns <br>  <br> There is hereby imposed on the taxable income of every married individual (as defined in section 7703) who does not make a single return jointly with his spouse, a tax determined in accordance with the following:",Alice is married under section 7703 for the year 2017. Alice's taxable income for the year 2017 is $554313. Alice files a separate return.,"False
+Explanation: The fact pattern explicitly fits the described segment of the statute: Alice is married (as defined in section 7703), she does not make a single return jointly with her spouse, and she files a separate return. The statute applies directly to individuals in this situation, regardless of their income level, so there is no legal ambiguity concerning the applicability of this statute to the fact pattern provided.",FALSE,FALSE,TRUE,0,Alice is married under the required section and files a separate return.,FALSE,correct,N/A,FALSE
+10,v2_02-25-2024_02-25-27,172,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (i) 15% of taxable income if the taxable income is not over $29,600;
+Fact pattern: Alice is a head of household for the year 2017. Alice's taxable income for the year 2017 is $1172980.
+choice: True
+choice: False
+A: False
+Explanation: Alice's taxable income is not within the range. 
+
+Statute: §3301. Rate of tax <br>  <br> There is hereby imposed on every employer (as defined in section 3306(a)) for each calendar year an excise tax, with respect to having individuals in his employ, equal to 6 percent of the total wages (as defined in section 3306(b)) paid by such employer during the calendar year with respect to employment (as defined in section 3306(c)).
+Fact pattern: Alice is an employer under section 3306(a) for the year 2015 and 2016, and she has paid $453009 in total wages in 2015, and $443870 in 2016.
+choice: True
+choice: False
+A: 
+Explanation:","§3301. Rate of tax <br>  <br> There is hereby imposed on every employer (as defined in section 3306(a)) for each calendar year an excise tax, with respect to having individuals in his employ, equal to 6 percent of the total wages (as defined in section 3306(b)) paid by such employer during the calendar year with respect to employment (as defined in section 3306(c)).","Alice is an employer under section 3306(a) for the year 2015 and 2016, and she has paid $453009 in total wages in 2015, and $443870 in 2016.","False
+Explanation: The statute clearly applies to every employer, as defined, and mandates a 6 percent tax on total wages paid with respect to employment. Given that Alice fits the criteria of an employer for the specified years and there are clear amounts of wages paid for those years, there is no legal ambiguity in applying the statute to the fact pattern. The statute directly applies to the situation described with Alice, determining the tax rate based on the wages she paid, with no ambiguity present in how the law is to be applied given these facts.",FALSE,FALSE,TRUE,0,Alice is an employer under the required section.,FALSE,correct,N/A,FALSE
+11,v2_02-25-2024_21-50-51,160,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (2) domestic service in a private home, local college club, or local chapter of a college fraternity or sorority unless performed for a person who paid cash remuneration of $1,000 or more to individuals employed in such domestic service in the calendar year or the preceding calendar year;
+Fact pattern: Alice has paid wages of $300 in cash to Bob for domestic service in her private home from Feb 1st, 2017 to Sep 2nd, 2017. The current year is 2017.
+choice: True
+choice: False
+A: False
+Explanation: Bob performed domestic service in Alice's private home, and could not have received cash remuneration more than $1000.
+
+Statute:         (A) an individual who is legally separated from his spouse under a decree of divorce or of separate maintenance shall not be considered as married;
+Fact pattern: Alice and Bob got married on Feb 3rd, 1992. In 2018, Alice and Bob start the legal separation process. The current year is 2010.
+choice: True
+choice: False
+A: 
+Explanation:",(A) an individual who is legally separated from his spouse under a decree of divorce or of separate maintenance shall not be considered as married;,"Alice and Bob got married on Feb 3rd, 1992. In 2018, Alice and Bob start the legal separation process. The current year is 2010.","True
+Explanation: There is a legal ambiguity in applying the statute to the fact pattern because the statute concerns the legal status of individuals who are ""legally separated from his spouse under a decree of divorce or of separate maintenance,"" and the fact pattern revolves around Alice and Bob who start the legal separation process in 2018, but the current year provided is 2010. The discrepancy in years creates an ambiguity as it implies a future event (separation in 2018) which has not occurred by the current year (2010), making it unclear how the statute applies to their marital status in 2010.",TRUE,FALSE,FALSE,0,"During the current year, Alice and Bob have not yet started the legal separation process.",FALSE,N/A,incorrect concl,FALSE
+12,v2_02-21-2024_23-34-56,44,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (2) an individual legally separated from his spouse under a decree of divorce or of separate maintenance shall not be considered as married.
+Fact pattern: Alice and Bob got married on April 5th, 2012. Alice and Bob were legally separated under a decree of divorce on September 16th, 2017. The current year is 2012.
+choice: True
+choice: False
+A: False
+Explanation: During the current year, Alice and Bob are not yet legally separated. 
+
+Statute:     (v) $79,772, plus 39.6% of the excess over $250,000 if the taxable income is over $250,000.
+Fact pattern: Alice's taxable income for the year 2017 is $210204. Alice is not married, is not a surviving spouse, and is not a head of household in 2017.
+choice: True
+choice: False
+A: 
+Explanation:","(v) $79,772, plus 39.6% of the excess over $250,000 if the taxable income is over $250,000.","Alice's taxable income for the year 2017 is $210204. Alice is not married, is not a surviving spouse, and is not a head of household in 2017.","False
+Explanation: The statute provides a tax calculation for incomes over $250,000. Since Alice's taxable income for the year 2017 is $210,204, which is below $250,000, the specific provision mentioned does not apply to her situation. There's no ambiguity in applying the statute to her fact pattern because her income level does not reach the threshold where the given tax rate and calculation would be relevant.",FALSE,FALSE,TRUE,0,Alice's taxable income is not within the range.,FALSE,correct,N/A,FALSE
+13,v2_02-25-2024_02-25-27,102,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (iii) $20,165, plus 31% of the excess over $89,150 if the taxable income is over $89,150 but not over $140,000;
+Fact pattern: Alice is a surviving spouse for the year 2017. Alice's taxable income for the year 2017 is $236422.
+choice: True
+choice: False
+A: False
+Explanation: Alice's taxable income is not within the range. 
+
+Statute:         (A) A child or a descendant of a child.
+Fact pattern: Bob is Alice's brother since April 15th, 2014.
+choice: True
+choice: False
+A: 
+Explanation:",(A) A child or a descendant of a child.,"Bob is Alice's brother since April 15th, 2014.","False
+Explanation: The statute specifies a child or descendant of a child; Bob, being Alice's brother, does not fit within these categories, thus eliminating legal ambiguity in this case.",FALSE,FALSE,TRUE,0,The fact pattern does not mention any children.,FALSE,correct,N/A,FALSE
+14,v2_02-21-2024_23-34-56,262,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:             (i) during the calendar year or the preceding calendar year paid remuneration in cash of $20,000 or more to individuals employed in agricultural labor (including labor performed by an alien referred to in subparagraph (B)), or
+Fact pattern: Alice has paid $23200 in remuneration in cash to Bob for managing an agricultural business she owns in Caracas, Venezuela, from Feb 1st, 2017 to Sep 2nd, 2017. Alice is an American employer. The current year is 2017.
+choice: True
+choice: False
+A: True
+Explanation: Bob's agricultural managing is technically agricultural labor, but most would agree it is not what is generally meant by agricultural labor.
+
+Statute:             (ii) a surviving spouse (as defined in section 2(a)),
+Fact pattern: In 2017, Alice was paid $33200. Alice is a surviving spouse for 2017.
+choice: True
+choice: False
+A: 
+Explanation:","(ii) a surviving spouse (as defined in section 2(a)),","In 2017, Alice was paid $33200. Alice is a surviving spouse for 2017.","False
+Explanation: There is no direct legal ambiguity here regarding the definition of a surviving spouse or the application to the fact pattern provided. The statute defines a surviving spouse in a specific way, presumably outlined in section 2(a), and the fact pattern straightforwardly states that Alice is a surviving spouse for 2017. There is no provided information that would complicate or bring into question the application of the statute to Alice’s status as a surviving spouse, making the scenario clear-cut without ambiguity.",FALSE,FALSE,TRUE,0,Alice is a surviving spouse.,FALSE,correct,N/A,FALSE
+15,v2_02-21-2024_23-34-56,133,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (A) during the calendar year or the preceding calendar year paid wages of $20,000 or more for agricultural labor, or
+Fact pattern: Alice has paid wages of $3200 to Bob for agricultural labor done from Feb 1st, 2017 to Sep 2nd, 2017. Bob has paid wages of $4520 to Alice for work done from Apr 1st, 2017 to Sep 1st, 2018. The current year is 2017.
+choice: True
+choice: False
+A: False
+Explanation: Alice has not paid more than $20000 in wages for agricultural labor in the calendar year. 
+
+Statute:         (A) whose spouse died during either of the two years immediately preceding the taxable year, and
+Fact pattern: Alice and Bob got married on Feb 3rd, 1992. Alice died on July 9th, 2014. The current year is 2015.
+choice: True
+choice: False
+A: 
+Explanation:","(A) whose spouse died during either of the two years immediately preceding the taxable year, and","Alice and Bob got married on Feb 3rd, 1992. Alice died on July 9th, 2014. The current year is 2015.","False
+Explanation: Alice died in 2014, and the current year is 2015, which is the immediate year following the year in which Alice died. Therefore, Bob’s situation directly fits the statute's requirement without ambiguity, as Alice's spouse died during one of the two years immediately preceding the taxable year (2015).",FALSE,FALSE,TRUE,0,Alice died in the year preceding the current taxable year.,FALSE,correct,N/A,FALSE
+16,v2_02-25-2024_02-25-27,147,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute: (b) Individuals who do not itemize their deductions <br>  <br> In the case of an individual who does not elect to itemize his deductions for the taxable year, for purposes of this subtitle, the term ""taxable income"" means adjusted gross income, minus-
+Fact pattern: In 2017, Alice was paid $33200. She is allowed a deduction under section 63(c)(1) of $2000 for the year 2017, and no deduction under section 151. Alice decides not to itemize her deductions.
+choice: True
+choice: False
+A: False
+Explanation: Alice decides not to itemize her deductions.
+
+Statute:         (A) maintains as his home a household which constitutes for more than one-half of such taxable year the principal place of abode, as a member of such household, of-
+Fact pattern: Alice and Bob got married on Feb 3rd, 1992. Alice and Bob have a child, Charlie, born October 9th, 2000. Alice died on July 9th, 2014. From 2004 to 2019, Bob furnished the costs of maintaining the home where he and Charlie lived during that time. Charlie was a qualifying child of Bob under section 152(c) from 2004 to 2019. The current year is 2018.
+choice: True
+choice: False
+A: 
+Explanation:","(A) maintains as his home a household which constitutes for more than one-half of such taxable year the principal place of abode, as a member of such household, of-","Alice and Bob got married on Feb 3rd, 1992. Alice and Bob have a child, Charlie, born October 9th, 2000. Alice died on July 9th, 2014. From 2004 to 2019, Bob furnished the costs of maintaining the home where he and Charlie lived during that time. Charlie was a qualifying child of Bob under section 152(c) from 2004 to 2019. The current year is 2018.","True
+Explanation: The legal ambiguity arises from the need to determine if the time period Alice was alive and contributing towards the home, combined with the period after her passing where Bob solely provided for the household, cumulatively meets the requirement of the household being the principal place of abode for more than half of the taxable year for Charlie. The calculation of the time period during which the home was maintained as the principal place of abode for Charlie involves considerations of both Alice's and Bob's contributions and the definition of ""taxable year"" in the context of the household's maintenance following Alice's death. This introduces ambiguity in applying the statute to the given fact pattern, particularly in determining eligibility based on the household's status for the majority of a given taxable year.",TRUE,FALSE,FALSE,0,"During the taxable year, Bob maintained the home that was his principal place of abode.",FALSE,N/A,incorrect concl,FALSE
+17,v2_02-25-2024_02-25-27,288,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (i) 15% of taxable income if the taxable income is not over $36,900;
+Fact pattern: Alice is a surviving spouse for the year 2017. Alice's taxable income for the year 2017 is $25561.
+choice: True
+choice: False
+A: False
+Explanation: Alice's taxable income is within the range.
+
+Statute:         (D) 1/2 the amount applicable under subparagraph (A) in the case of a married individual filing a separate return.
+Fact pattern: In 2016, Alice's income was $567192. Alice is not married.
+choice: True
+choice: False
+A: 
+Explanation:",(D) 1/2 the amount applicable under subparagraph (A) in the case of a married individual filing a separate return.,"In 2016, Alice's income was $567192. Alice is not married.","False
+Explanation: The statute pertains to “a married individual filing a separate return,” and since Alice is not married, the statute does not apply to her situation, removing any ambiguity.",FALSE,FALSE,TRUE,0,Alice is not married.,FALSE,correct,N/A,FALSE
+18,v2_02-21-2024_23-34-56,59,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (E) who has not filed a joint return (other than only for a claim of refund) with the individual's spouse for the taxable year beginning in the calendar year in which the taxable year of the taxpayer begins.
+Fact pattern: Alice has a son, Bob. From September 1st, 2015 to November 3rd, 2019, Alice and Bob lived in the same home. Bob married Charlie on October 23rd, 2018. Bob and Charlie filed a joint return for the year 2019. The current year is 2019.
+choice: True
+choice: False
+A: False
+Explanation: Bob has filed a joint return with his spouse in the current year. 
+
+Statute: (b) Taxpayer and spouse <br>  <br> An exemption of the exemption amount for the taxpayer; and an additional exemption of the exemption amount for the spouse of the taxpayer if a joint return is not made by the taxpayer and his spouse, and if the spouse, for the calendar year in which the taxable year of the taxpayer begins, has no gross income and is not the dependent of another taxpayer.
+Fact pattern: Alice and Bob have been married since 2 Feb 2015. Alice and Bob file separately. Bob has no income for 2015. Bob is not a dependent. The current year is 2015.
+choice: True
+choice: False
+A: 
+Explanation:","(b) Taxpayer and spouse <br>  <br> An exemption of the exemption amount for the taxpayer; and an additional exemption of the exemption amount for the spouse of the taxpayer if a joint return is not made by the taxpayer and his spouse, and if the spouse, for the calendar year in which the taxable year of the taxpayer begins, has no gross income and is not the dependent of another taxpayer.",Alice and Bob have been married since 2 Feb 2015. Alice and Bob file separately. Bob has no income for 2015. Bob is not a dependent. The current year is 2015.,"False
+Explanation: There is no legal ambiguity in this scenario. Alice and Bob file separately, Bob has no income for the year, and is not a dependent of another taxpayer. Therefore, according to the statute, Alice is eligible for an additional exemption for Bob since all the conditions are met: they do not file a joint return, Bob has no gross income for the calendar year, and he is not a dependent of another taxpayer.",FALSE,FALSE,TRUE,0,There is no joint return. Bob has no income this year and is not a dependent.,FALSE,correct,N/A,FALSE
+19,v2_02-25-2024_21-50-51,284,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. Your task is to identify if there is legal ambiguity in the application of the statute to the fact pattern. If there is this legal ambiguity, respond “True”; if there is not this legal ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (B) on each of some 10 days during the calendar year or during the preceding calendar year, each day being in a different calendar week, employed at least one individual in employment for some portion of the day.
+Fact pattern: Alice has employed Bob on various occasions during the year 2017: - Jan 24 - Feb 4 - Mar 3 - Mar 18 - Apr 1 - Oct 25 - Nov 8 - Nov 22 - Dec 1 - Dec 2
+choice: True
+choice: False
+A: False
+Explanation: Alice has not employed one individual on each of 10 days in different weeks.
+
+Statute:         (A) $300,000 in the case of a joint return or a surviving spouse (as defined in section 2(a)),
+Fact pattern: In 2016, Alice's income was $567192. Alice is a surviving spouse for the year 2016.
+choice: True
+choice: False
+A: 
+Explanation:","(A) $300,000 in the case of a joint return or a surviving spouse (as defined in section 2(a)),","In 2016, Alice's income was $567192. Alice is a surviving spouse for the year 2016.","True
+Explanation: There is a legal ambiguity regarding whether Alice's income exceeding $300,000 affects her status or benefits as a surviving spouse under the specified statute. The statute sets a financial threshold for a joint return or a surviving spouse but does not clearly state the implications of exceeding this threshold.",TRUE,FALSE,FALSE,0,Alice is a surviving spouse.,FALSE,N/A,lack info,FALSE

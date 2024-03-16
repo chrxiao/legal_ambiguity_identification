@@ -1,0 +1,321 @@
+,run,ds_ind,model_input,statute,fact_pattern,model_output,model_output_processed,my_annotated_ambiguity_exists,is_model_correct,my_annotated_level_of_ambiguity,my_annotated_reason_for_ambiguity,ans_exp_conflict,correct_ans_exp,incorrect_ans_mistake,orig_task_attempt
+0,v1.2_02-25-2024_14-03-24,59,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (C) The father or mother, or an ancestor of either.
+Fact pattern: Bob is Alice's biological son, born April 15th, 2014, and subsequently given up for adoption.
+choice: True
+choice: False
+A: True
+Explanation: Bob is Alice's definitional biological son, but he does not play the role of son, as he was given up for adoption.
+
+Statute: (b) Taxpayer and spouse <br>  <br> An exemption of the exemption amount for the taxpayer; and an additional exemption of the exemption amount for the spouse of the taxpayer if a joint return is not made by the taxpayer and his spouse, and if the spouse, for the calendar year in which the taxable year of the taxpayer begins, has no gross income and is not the dependent of another taxpayer.
+Fact pattern: Alice and Bob have been married since 2 Feb 2015. Alice and Bob file separately. Bob has no income for 2015. Bob is not a dependent. The current year is 2015.
+choice: True
+choice: False
+A: 
+Explanation:","(b) Taxpayer and spouse <br>  <br> An exemption of the exemption amount for the taxpayer; and an additional exemption of the exemption amount for the spouse of the taxpayer if a joint return is not made by the taxpayer and his spouse, and if the spouse, for the calendar year in which the taxable year of the taxpayer begins, has no gross income and is not the dependent of another taxpayer.",Alice and Bob have been married since 2 Feb 2015. Alice and Bob file separately. Bob has no income for 2015. Bob is not a dependent. The current year is 2015.,"False
+Explanation: The statute clearly stipulates the conditions under which a taxpayer and their spouse can claim an additional exemption amount: when they file separately, the spouse has no gross income, and is not dependent on another taxpayer. In the provided fact pattern, Bob meets all the specified conditions for the tax year in question (2015). Therefore, there is no ambiguity regarding whether the stipulated conditions for the exemption are met, making the combination of the statute and the fact pattern unambiguous.",FALSE,FALSE,TRUE,0,There is no joint return. Bob has no income this year and is not a dependent.,FALSE,correct,N/A,FALSE
+1,v1.2_02-24-2024_20-31-52,147,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (B) performed outside the United States (except in a contiguous country with which the United States has an agreement relating to unemployment compensation) by a citizen of the United States as an employee of an American employer,
+Fact pattern: Alice has paid $3200 to Bob for work done from Feb 1st, 2017 to Sep 2nd, 2017, in Caracas, Venezuela. Bob is an American citizen and Alice is an American employer.
+choice: True
+choice: False
+A: False
+Explanation: Bob is an American citizen, employed by an American employer, who performed outside the U.S. 
+
+Statute:         (A) maintains as his home a household which constitutes for more than one-half of such taxable year the principal place of abode, as a member of such household, of-
+Fact pattern: Alice and Bob got married on Feb 3rd, 1992. Alice and Bob have a child, Charlie, born October 9th, 2000. Alice died on July 9th, 2014. From 2004 to 2019, Bob furnished the costs of maintaining the home where he and Charlie lived during that time. Charlie was a qualifying child of Bob under section 152(c) from 2004 to 2019. The current year is 2018.
+choice: True
+choice: False
+A: 
+Explanation:","(A) maintains as his home a household which constitutes for more than one-half of such taxable year the principal place of abode, as a member of such household, of-","Alice and Bob got married on Feb 3rd, 1992. Alice and Bob have a child, Charlie, born October 9th, 2000. Alice died on July 9th, 2014. From 2004 to 2019, Bob furnished the costs of maintaining the home where he and Charlie lived during that time. Charlie was a qualifying child of Bob under section 152(c) from 2004 to 2019. The current year is 2018.","False
+Explanation: The statute describes a scenario where an individual maintains a home as their principal place of abode for more than half the taxable year, and that home must be the principal place of abode for a member of their household. In the provided fact pattern, Bob has furnished the costs of maintaining the home where he and Charlie lived from 2004 to 2019. Since Charlie, a qualifying child under section 152(c) lived with Bob during this time, it meets the criteria of maintaining a home that constitutes for more than one-half of the taxable year the principal place of abode for a member of the household, which in this case is Charlie. Hence, there is no ambiguity with respect to the statute's requirements being satisfied by the given fact pattern for the year 2018.",FALSE,FALSE,TRUE,0,"During the taxable year, Bob maintained the home that was his principal place of abode.",FALSE,correct,N/A,FALSE
+2,v1.2_02-21-2024_15-04-34,280,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (B) a brother, sister, stepbrother, or stepsister of the taxpayer or a descendant of any such relative.
+Fact pattern: Alice has adopted a son, Bob, who was born January 31st, 2014.
+choice: True
+choice: False
+A: False
+Explanation: The fact pattern does not mention any brothers or sisters. 
+
+Statute:         (B) for the spouse of the taxpayer if the spouse is blind as of the close of the taxable year and an additional exemption is allowable to the taxpayer for such spouse under section 151(b).
+Fact pattern: In 2017, Alice was paid $33200. Alice and Bob have been married since Feb 3rd, 2017. Alice has been blind since March 20, 2016. In addition, Bob is allowed an exemption for Alice under section 151(b) for the year 2017. As of November 20, 2017, Alice has began to regain some vision. The current year is 2017.
+choice: True
+choice: False
+A: 
+Explanation:",(B) for the spouse of the taxpayer if the spouse is blind as of the close of the taxable year and an additional exemption is allowable to the taxpayer for such spouse under section 151(b).,"In 2017, Alice was paid $33200. Alice and Bob have been married since Feb 3rd, 2017. Alice has been blind since March 20, 2016. In addition, Bob is allowed an exemption for Alice under section 151(b) for the year 2017. As of November 20, 2017, Alice has began to regain some vision. The current year is 2017.","True
+Explanation: The statute specifies the condition for an additional exemption for a taxpayer's spouse if they are blind as of the close of the taxable year. It also mentions that the exemption is allowable under section 151(b). The fact pattern states that Alice, the spouse of Bob, has been blind since March 20, 2016, and that Bob is allowed an exemption for Alice under section 151(b) for the year 2017. Although Alice has begun to regain some vision as of November 20, 2017, the statute's application hinges on the definition of ""blind as of the close of the taxable year."" Since Alice began to regain vision before the close of the taxable year, there is ambiguity regarding whether she still qualifies as ""blind"" by the statutory or medical standard at the year-end. Thus, there is ambiguity in applying the statute to this fact pattern given the information about Alice's changing condition within the taxable year.",TRUE,TRUE,TRUE,2,It depends on the statute's intention for the spouses of blind people.,FALSE,correct,N/A,FALSE
+3,v1.2_02-24-2024_20-31-52,196,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (B) a brother, sister, stepbrother, or stepsister of the taxpayer or a descendant of any such relative.
+Fact pattern: Alice has a brother, Bob, who was born January 31st, 2014.
+choice: True
+choice: False
+A: False
+Explanation: Bob is Alice's brother.
+
+Statute:     (15) any payment made by an employer to a survivor or the estate of a former employee after the calendar year in which such employee died;
+Fact pattern: Alice employed Bob for agricultural labor from Feb 1st, 2011 to November 19th, 2019. On November 25th, Bob died from a heart attack. On January 20th, 2020, Alice paid Charlie, Bob's surviving spouse, Bob's outstanding wages of $1200. The current year is 2020.
+choice: True
+choice: False
+A: 
+Explanation:",(15) any payment made by an employer to a survivor or the estate of a former employee after the calendar year in which such employee died;,"Alice employed Bob for agricultural labor from Feb 1st, 2011 to November 19th, 2019. On November 25th, Bob died from a heart attack. On January 20th, 2020, Alice paid Charlie, Bob's surviving spouse, Bob's outstanding wages of $1200. The current year is 2020.","False
+Explanation: The statute specifies that payments made by an employer to a survivor or estate of a former employee after the calendar year in which the employee died are covered by this statute. Since Bob died in 2019 and Alice paid the outstanding wages to Charlie (Bob's surviving spouse) in 2020, this transaction falls directly within the specifications of the statute without ambiguity.",FALSE,FALSE,TRUE,0,"In the year after Bob's death, Alice paid Bob's survivor.",FALSE,correct,N/A,FALSE
+4,v1.2_02-25-2024_14-03-24,153,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (A) for himself if he has attained age 65 before the close of his taxable year, and
+Fact pattern: In 2017, Alice was paid $33200. Alice and Bob have been married since Feb 3rd, 2017. Alice was born March 2nd, 1950 and Bob was born March 3rd, 1955. The current year is 2017.
+choice: True
+choice: False
+A: False
+Explanation: Alice is 67.
+
+Statute:         (B) maintains a household which constitutes for such taxable year the principal place of abode of the father or mother of the taxpayer, if the taxpayer is entitled to a deduction for the taxable year for such father or mother under section 151.
+Fact pattern: Alice and Bob got married on Feb 3rd, 1992. Alice died on July 9th, 2014. From 2004 to 2019, Bob furnished the costs of maintaining the home where he and his father Charlie lived during that time. Bob is entitled to a deduction for Charlie under section 151(c) for the years 2015 to 2019. The current year is 2018.
+choice: True
+choice: False
+A: 
+Explanation:","(B) maintains a household which constitutes for such taxable year the principal place of abode of the father or mother of the taxpayer, if the taxpayer is entitled to a deduction for the taxable year for such father or mother under section 151.","Alice and Bob got married on Feb 3rd, 1992. Alice died on July 9th, 2014. From 2004 to 2019, Bob furnished the costs of maintaining the home where he and his father Charlie lived during that time. Bob is entitled to a deduction for Charlie under section 151(c) for the years 2015 to 2019. The current year is 2018.","True
+Explanation: The statute specifies that the taxpayer (Bob in this case) maintains a household which is the principal place of abode of the father (Charlie) and that the taxpayer is entitled to a deduction for the taxable year for such father under section 151. According to the fact pattern, Bob has indeed been furnishing the costs of maintaining the home where he and his father lived from 2004 to 2019 and is entitled to a deduction for Charlie under section 151(c) for the years 2015 to 2019. Given that the current year is 2018 and Bob is entitled to a deduction for his father, the specified conditions of the statute are met without ambiguity.",TRUE,FALSE,FALSE,0,Bob furnishes costs of maintaining a household where he lives with his father.,TRUE,correct,N/A,FALSE
+5,v1.2_02-25-2024_14-03-24,96,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (ii) $5,535, plus 28% of the excess over $36,900 if the taxable income is over $36,900 but not over $89,150;
+Fact pattern: Alice is a surviving spouse for the year 2017. Alice's taxable income for the year 2017 is $70117.
+choice: True
+choice: False
+A: False
+Explanation: Alice's taxable income is within the range.
+
+Statute:     (3) Age requirements <br>  <br>    For purposes of paragraph (1)(C), an individual meets the requirements of this paragraph if such individual is younger than the taxpayer claiming such individual as a qualifying child and is less than 25 years old at the end of the taxable year.
+Fact pattern: Alice was born January 10th, 1992. Bob was born January 31st, 1984. Alice adopted Bob on March 4th, 2018. The current year is 2019.
+choice: True
+choice: False
+A: 
+Explanation:","(3) Age requirements <br>  <br>    For purposes of paragraph (1)(C), an individual meets the requirements of this paragraph if such individual is younger than the taxpayer claiming such individual as a qualifying child and is less than 25 years old at the end of the taxable year.","Alice was born January 10th, 1992. Bob was born January 31st, 1984. Alice adopted Bob on March 4th, 2018. The current year is 2019.","True
+Explanation: The ambiguity in this scenario arises from the specifics of the age requirement, especially the interpretation of ""younger than the taxpayer"" in context with the adoption scenario. Alice, born in 1992, would be 27 years old at the end of 2019, and Bob, born in 1984, would be 35 years old. Although Bob is adopted by Alice and is technically a dependent, the statute highlights that the individual must be ""younger than the taxpayer"" and ""less than 25 years old at the end of the taxable year"" to be considered a qualifying child. Given the adoption scenario and the age criteria, there is ambiguity in whether or not Bob can be considered a qualifying child under these specific instructions, as he does not meet the age requirement, yet the relationship dynamic introduces a level of ambiguity.",TRUE,FALSE,FALSE,0,Both Alice and Bob are older than 25 years old.,FALSE,N/A,unusual def,FALSE
+6,v1.2_02-25-2024_14-03-24,193,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (B) $4,400 in the case of a head of household (as defined in section 2(b)), or
+Fact pattern: In 2017, Alice was paid $33200. Alice is a head of household for 2017.
+choice: True
+choice: False
+A: False
+Explanation: Alice is a head of a household.
+
+Statute:     (11) remuneration for agricultural labor paid in any medium other than cash;
+Fact pattern: Alice has paid $3200 to Bob for agricultural labor done from Feb 1st, 2017 to Sep 2nd, 2017. Alice paid Bob with eggs, grapes and hay.
+choice: True
+choice: False
+A: 
+Explanation:",(11) remuneration for agricultural labor paid in any medium other than cash;,"Alice has paid $3200 to Bob for agricultural labor done from Feb 1st, 2017 to Sep 2nd, 2017. Alice paid Bob with eggs, grapes and hay.","True
+Explanation: The statute mentions that remuneration for agricultural labor must be paid in a medium other than cash to fit the specific criteria. Since Alice paid Bob with eggs, grapes, and hay instead of cash for the agricultural labor he performed, this situation fits directly into the exception outlined by the statute, without ambiguity, regarding the form of payment for agricultural labor.",TRUE,FALSE,FALSE,0,"Bob was paid for agricultural labor, in mediums other than cash.",TRUE,correct,N/A,FALSE
+7,v1.2_02-24-2024_20-31-52,141,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:             (ii) a surviving spouse (as defined in section 2(a)),
+Fact pattern: In 2017, Alice was paid $33200. Alice and Bob have been married since Feb 3rd, 2017, and they file a joint return for 2017.
+choice: True
+choice: False
+A: False
+Explanation: Alice is not a surviving spouse.
+
+Statute:         (A) if the taxpayer has remarried at any time before the close of the taxable year, or
+Fact pattern: Alice and Bob got married on Feb 3rd, 1992. Alice died on July 9th, 2014. Bob and Charlie began the process of marriage on December 31st, 2015. The current year is 2015.
+choice: True
+choice: False
+A: 
+Explanation:","(A) if the taxpayer has remarried at any time before the close of the taxable year, or","Alice and Bob got married on Feb 3rd, 1992. Alice died on July 9th, 2014. Bob and Charlie began the process of marriage on December 31st, 2015. The current year is 2015.","True
+Explanation: The statute addresses the status of a taxpayer who has remarried before the end of the taxable year, which introduces ambiguity regarding the specific situation of Bob and Charlie. Since they began the process of marriage on December 31st, 2015, and the current year is 2015, it's unclear without further information whether this process was completed within the 2015 taxable year, affecting Bob's marital status per the statute's condition. Hence, there's ambiguity in applying the statute to this fact pattern.",TRUE,TRUE,TRUE,1,"Because Bob and Charlie are in the process of getting married, it could be argued that the statute should be applied considering their intent. However, they objectively do not meet the definition of married yet.",FALSE,correct,N/A,FALSE
+8,v1.2_02-24-2024_20-31-52,65,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (B) a brother, sister, stepbrother, or stepsister of the taxpayer or a descendant of any such relative.
+Fact pattern: Alice has adopted a son, Bob, who was born January 31st, 2014.
+choice: True
+choice: False
+A: False
+Explanation: The fact pattern does not mention any brothers or sisters. 
+
+Statute:         (B) Applicable percentage <br>  <br>        For purposes of subparagraph (A), the term ""applicable percentage"" means 2 percentage points for each $2,500 (or fraction thereof) by which the taxpayer's adjusted gross income for the taxable year exceeds the applicable amount in effect under section 68(b). In the case of a married individual filing a separate return, the preceding sentence shall be applied by substituting ""$1,250"" for ""$2,500"". In no event shall the applicable percentage exceed 100 percent.
+Fact pattern: Alice's income in 2015 is $276932. Alice is not married. The applicable amount according to section 68(b) is $250000.
+choice: True
+choice: False
+A: 
+Explanation:","(B) Applicable percentage <br>  <br>        For purposes of subparagraph (A), the term ""applicable percentage"" means 2 percentage points for each $2,500 (or fraction thereof) by which the taxpayer's adjusted gross income for the taxable year exceeds the applicable amount in effect under section 68(b). In the case of a married individual filing a separate return, the preceding sentence shall be applied by substituting ""$1,250"" for ""$2,500"". In no event shall the applicable percentage exceed 100 percent.",Alice's income in 2015 is $276932. Alice is not married. The applicable amount according to section 68(b) is $250000.,"True
+Explanation: The statute defines ""applicable percentage"" based on a formula related to how much a taxpayer's adjusted gross income exceeds a certain amount. Given that Alice's income is $276,932 and the applicable amount is $250,000, the calculation for the applicable percentage involves determining how much Alice's income exceeds $250,000 and then applying the formula specified. Alice's income exceeds the applicable amount by $26,932, which we divide by $2,500 to determine how many times 2 percentage points must be added. This situation involves calculations that depend on precise values, and there could be ambiguity in applying the formula (for instance, how to handle fractions of $2,500, how rounding is handled, etc.). Therefore, there is ambiguity in applying the statute to the fact pattern given the need to precisely interpret and apply the formula to specific numbers.",TRUE,FALSE,FALSE,0,The fact pattern mentions Alice's gross income and the applicable amount under the required section.,FALSE,N/A,unusual def,FALSE
+9,v1.2_02-25-2024_14-03-24,72,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (A) performed by an employee for the person employing him, irrespective of the citizenship or residence of either, within the United States, and
+Fact pattern: Alice and Bob are friends living in Baltimore, Maryland, USA. On occasion, Bob has helped Alice run specified errands. Alice gave Bob $200 as a token of gratitude. 
+choice: True
+choice: False
+A: True
+Explanation: Technically, Alice has employed Bob by paying him for his services. However, most would not read this relationship as employment.
+
+Statute:         (B) who has the same principal place of abode as the taxpayer for more than one-half of such taxable year,
+Fact pattern: Alice has a son, Bob. From September 1st, 2015 to November 3rd, 2019, Alice and Bob lived in the same home. The current year is 2015.
+choice: True
+choice: False
+A: 
+Explanation:","(B) who has the same principal place of abode as the taxpayer for more than one-half of such taxable year,","Alice has a son, Bob. From September 1st, 2015 to November 3rd, 2019, Alice and Bob lived in the same home. The current year is 2015.","False
+Explanation: Based on the provided dates, Alice and Bob have lived together for a significant portion of the year 2015, from January 1st, 2015, to November 3rd, 2019, which clearly exceeds the one-half of the taxable year threshold mentioned in the statute. Therefore, there is no ambiguity in this case as Bob satisfies the condition of having the same principal place of abode as Alice for more than half of the taxable year 2015.",FALSE,FALSE,TRUE,0,Alice and Bob did not have the same principal abode for more than one-half of the year.,FALSE,incorrect,N/A,FALSE
+10,v1.2_02-25-2024_14-03-24,121,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (2) such individual furnishes over one-half of the cost of maintaining such household during the taxable year, and
+Fact pattern: Alice and Bob got married on April 5th, 2012. Alice and Bob have a son, Charlie, who was born on September 16th, 2017. Alice and Charlie live in a home for which Alice furnished 40% of the maintenance costs, since September 16th, 2017. Alice is entitled to a deduction for Charlie under section 151(c) for the years 2017 to 2019. The current year is 2018.
+choice: True
+choice: False
+A: False
+Explanation: During the taxable year, Alice furnished less than one-half of the cost of maintaining the household.
+
+Statute:         (C) The father or mother, or an ancestor of either.
+Fact pattern: Bob is Alice's foster son since April 15th, 2014.  
+choice: True
+choice: False
+A: 
+Explanation:","(C) The father or mother, or an ancestor of either.","Bob is Alice's foster son since April 15th, 2014.","True
+Explanation: The statute does not explicitly address the status of foster relationships, introducing ambiguity regarding whether a foster son, such as Bob, would be considered under the category of ""the father or mother, or an ancestor of either."" This ambiguity stems from the lack of clarity on whether the legal or biological relationship is being referenced, and whether foster relationships are included within the scope of this definition.",TRUE,TRUE,TRUE,2,"It's unclear whether foster parenting is included in the intent of the statute, as fostering is a temporary placement.",FALSE,correct,N/A,FALSE
+11,v1.2_02-21-2024_15-04-34,88,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (3) during the last 6 months of the taxable year, such individual's spouse is not a member of such household,
+Fact pattern: Alice and Bob got married on April 5th, 2012. Alice and Bob have a son, Charlie, who was born on September 16th, 2017. Alice and Charlie live in a home maintained by Alice since September 16th, 2017. Alice is entitled to a deduction for Charlie under section 151(c) for the years 2017 to 2019. Alice and Bob are still together, but on February 10th, 2018, Bob started working overseas. Bob lived in the same house as Alice and Charlie from September 16th, 2017 until February 10th, 2018. The current year is 2018.
+choice: True
+choice: False
+A: True
+Explanation: For the last 6 months of the taxable year, Bob was not literally a member of Alice's household, but they were still together and colloquially could be considered as such.
+
+Statute:         (B) a brother, sister, stepbrother, or stepsister of the taxpayer or a descendant of any such relative.
+Fact pattern: Alice has a son, Bob, who was born January 31st, 2014.
+choice: True
+choice: False
+A: 
+Explanation:","(B) a brother, sister, stepbrother, or stepsister of the taxpayer or a descendant of any such relative.","Alice has a son, Bob, who was born January 31st, 2014.","False
+Explanation: The statute clearly defines the relatives that qualify without ambiguity – a brother, sister, stepbrother, or stepsister of the taxpayer, or a descendant of any of those relatives. Bob, being Alice's son, directly fits the description as a ""descendant of such relative"" (in this case, the relative is Alice herself). There is no ambiguity in applying this statute to the fact pattern.",FALSE,FALSE,TRUE,0,The fact pattern does not mention any brothers or sisters.,FALSE,incorrect,N/A,FALSE
+12,v1.2_02-21-2024_15-04-34,155,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (2) domestic service in a private home, local college club, or local chapter of a college fraternity or sorority unless performed for a person who paid cash remuneration of $1,000 or more to individuals employed in such domestic service in the calendar year or the preceding calendar year;
+Fact pattern: Alice is a landlord. Alice has paid wages of $3200 in cash to Bob for domestic service in one of the properties she rents out, from Feb 1st, 2017 to Sep 2nd, 2017, in Baltimore, Maryland, USA. The current year is 2017.
+choice: True
+choice: False
+A: False
+Explanation: Regardless of whether Alice's rental property can be counted as a private home, Bob received cash remuneration more than $1000.
+
+Statute:         (B) maintains a household which constitutes for such taxable year the principal place of abode of the father or mother of the taxpayer, if the taxpayer is entitled to a deduction for the taxable year for such father or mother under section 151.
+Fact pattern: Alice and Bob got married on Feb 3rd, 1992. Alice died on July 9th, 2014. From 2004 to 2019, Bob furnished the costs of maintaining the home where he and his foster parent Charlie lived during that time. Bob is entitled to a deduction for Charlie under section 151(c) for the years 2015 to 2019. The current year is 2018.
+choice: True
+choice: False
+A: 
+Explanation:","(B) maintains a household which constitutes for such taxable year the principal place of abode of the father or mother of the taxpayer, if the taxpayer is entitled to a deduction for the taxable year for such father or mother under section 151.","Alice and Bob got married on Feb 3rd, 1992. Alice died on July 9th, 2014. From 2004 to 2019, Bob furnished the costs of maintaining the home where he and his foster parent Charlie lived during that time. Bob is entitled to a deduction for Charlie under section 151(c) for the years 2015 to 2019. The current year is 2018.","True
+Explanation: The statute focuses on the maintenance of a household as the principal place of abode of the taxpayer's father or mother, with the condition that the taxpayer is entitled to a deduction under section 151 for those parents. In the fact pattern, Bob is maintaining a household for his foster parent, Charlie, not a biological or legally adopted parent. While Bob is entitled to a deduction under section 151 for Charlie, the statute's specific reference to ""father or mother"" introduces ambiguity regarding whether a foster parent qualifies within this definition. Therefore, there's ambiguity in applying this statute to Bob's situation with his foster parent Charlie.",TRUE,TRUE,TRUE,2,"It's unclear whether foster parenting is included in the intent of the statute, as fostering is a temporary placement.",FALSE,correct,N/A,FALSE
+13,v1.2_02-21-2024_15-04-34,120,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (A) if the taxpayer has remarried at any time before the close of the taxable year, or
+Fact pattern: Alice and Bob got married on Feb 3rd, 1992. Alice died on July 9th, 2014. Bob and Charlie entered a domestic partnership on September 14th, 2015. The current year is 2014.
+choice: True
+choice: False
+A: False
+Explanation: Regardless of future plans, by the end of the current year, Bob has yet to remarry.
+
+Statute:         (C) The father or mother, or an ancestor of either.
+Fact pattern: Bob is Alice's adoptive son since April 15th, 2014.  
+choice: True
+choice: False
+A: 
+Explanation:","(C) The father or mother, or an ancestor of either.","Bob is Alice's adoptive son since April 15th, 2014.","True
+Explanation: The statute's language does not specify whether the terms ""father,"" ""mother,"" or ""ancestor"" include adoptive relationships. Therefore, it's ambiguous whether Bob, as an adoptive son, would qualify Alice as a ""mother"" or not under this statute.",TRUE,TRUE,TRUE,1,"Bob is not Alice's definitional biological child, but he plays the role of child as Alice's adoptive child.",FALSE,correct,N/A,FALSE
+14,v1.2_02-24-2024_20-31-52,114,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (7) remuneration paid in any medium other than cash to an employee for service not in the course of the employer's trade or business;
+Fact pattern: Alice has been running a typewriter factory since February 1st, 2016. Bob is an employee at the typewriter factory. On October 2nd 2017, Alice has given a check of value $323 to Bob in exchange for Bob painting Alice's house.
+choice: True
+choice: False
+A: True
+Explanation: A check is technically not cash, but the statute seems to be making a money v.s. non-monetary goods distinction.
+
+Statute:         (B) A brother, sister, stepbrother, or stepsister.
+Fact pattern: Bob is Alice's brother since April 15th, 2014.
+choice: True
+choice: False
+A: 
+Explanation:","(B) A brother, sister, stepbrother, or stepsister.","Bob is Alice's brother since April 15th, 2014.","False
+Explanation: The relationship of brother and sister is clearly defined and does not present ambiguity based on the provided statute. The statute straightforwardly includes brothers and sisters, without specifying any conditions that would introduce ambiguity concerning the fact that Bob is Alice's brother. Therefore, there is no ambiguity in applying the statute to the stated fact pattern.",FALSE,FALSE,TRUE,0,Bob is Alice's brother.,FALSE,correct,N/A,FALSE
+15,v1.2_02-24-2024_20-31-52,264,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (A) $300,000 in the case of a joint return or a surviving spouse (as defined in section 2(a)),
+Fact pattern: In 2016, Alice's income was $567192. Alice is married for the year 2016 under section 7703. Alice does not file a joint return. The current year is 2016.
+choice: True
+choice: False
+A: False
+Explanation: Alice does not file a joint return, nor is she a surviving spouse (as she is married).
+
+Statute:     (3) Additional standard deduction for aged and blind <br>  <br>    For purposes of paragraph (1), the additional standard deduction is the sum of each additional amount to which the taxpayer is entitled under subsection (f).
+Fact pattern: In 2017, Alice was paid $33200. Alice and Bob have been married since Feb 3rd, 2017. Alice is entitled to an additional standard deduction of $600 each for herself and for Bob, under section 63(f)(1)(A) and 63(f)(1)(B), respectively.
+choice: True
+choice: False
+A: 
+Explanation:","(3) Additional standard deduction for aged and blind <br>  <br>    For purposes of paragraph (1), the additional standard deduction is the sum of each additional amount to which the taxpayer is entitled under subsection (f).","In 2017, Alice was paid $33200. Alice and Bob have been married since Feb 3rd, 2017. Alice is entitled to an additional standard deduction of $600 each for herself and for Bob, under section 63(f)(1)(A) and 63(f)(1)(B), respectively.","True
+Explanation: The statute references subsection (f) for determining the amounts of additional standard deduction for those who are aged or blind, without specifying the exact amounts or conditions for these deductions. The fact pattern mentions specific additional standard deduction amounts for Alice and Bob based on section 63(f)(1)(A) and 63(f)(1)(B), but without the specific text of those subsections, there's ambiguity regarding the conditions under which these amounts apply, such as age or blindness requirements. Thus, there is ambiguity in how the statute's referenced subsection (f) applies to Alice's and Bob's situation, making the answer ""True"".",TRUE,FALSE,FALSE,0,Both Alice and Bob claim deductions within the section for the aged and blind.,FALSE,N/A,lack info,FALSE
+16,v1.2_02-25-2024_14-03-24,174,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:             (ii) a surviving spouse (as defined in section 2(a)),
+Fact pattern: In 2017, Alice was paid $33200. Alice and Bob have been married since Feb 3rd, 2017, and they file a joint return for 2017.
+choice: True
+choice: False
+A: False
+Explanation: Alice is not a surviving spouse.
+
+Statute:         (A) during the calendar year or the preceding calendar year paid wages of $1,500 or more, or
+Fact pattern: Alice has paid wages of $3200 to Bob for work done from Feb 1st, 2017 to Sep 1st, 2017. Bob has paid wages of $4500 to Alice for work done from Apr 1st, 2017 to Sep 1st, 2018. The current year is 2017.
+choice: True
+choice: False
+A: 
+Explanation:","(A) during the calendar year or the preceding calendar year paid wages of $1,500 or more, or","Alice has paid wages of $3200 to Bob for work done from Feb 1st, 2017 to Sep 1st, 2017. Bob has paid wages of $4500 to Alice for work done from Apr 1st, 2017 to Sep 1st, 2018. The current year is 2017.","True
+Explanation: The statute requires an entity to have paid wages of $1,500 or more during the calendar year or the preceding calendar year. Both Alice and Bob have paid wages to each other above this threshold within the current year 2017, and Bob's payments to Alice extend into 2018. However, the ambiguity arises from whether these payments between Alice and Bob meet all the conditions implied by the statute (e.g., employer-employee relationship), and the calendar year consideration for Bob's payments extending into the next year.",TRUE,FALSE,FALSE,0,Alice has paid wages greater than the range this year.,FALSE,N/A,unusual def,FALSE
+17,v1.2_02-21-2024_15-04-34,251,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (B) A brother, sister, stepbrother, or stepsister.
+Fact pattern: Bob is Alice's biological brother, born April 15th, 2014, and subsequently given up for adoption.
+choice: True
+choice: False
+A: True
+Explanation: Bob is Alice's definitional biological brother, but he does not play the role of brother, as he was given up for adoption.
+
+Statute:     (B) performed outside the United States (except in a contiguous country with which the United States has an agreement relating to unemployment compensation) by a citizen of the United States as an employee of an American employer,
+Fact pattern: Alice has paid $3200 to Bob for work done from Feb 1st, 2017 to Sep 2nd, 2017, in Caracas, Venezuela. Alice is a citizen of Venezuela, and Bob is an American citizen.
+choice: True
+choice: False
+A: 
+Explanation:","(B) performed outside the United States (except in a contiguous country with which the United States has an agreement relating to unemployment compensation) by a citizen of the United States as an employee of an American employer,","Alice has paid $3200 to Bob for work done from Feb 1st, 2017 to Sep 2nd, 2017, in Caracas, Venezuela. Alice is a citizen of Venezuela, and Bob is an American citizen.","False
+Explanation: The statute specifies that the employment must be performed outside the United States by a citizen of the United States as an employee of an American employer. In this case, although Bob is an American citizen which fits part of the statute's criteria, Alice, the employer, is a citizen of Venezuela, not an American employer. Therefore, there is no ambiguity in applying the statute to the fact pattern, as it clearly does not meet the statute's requirement regarding the employer's nationality.",FALSE,FALSE,TRUE,0,Alice is not an American employer.,FALSE,correct,N/A,FALSE
+18,v1.2_02-24-2024_20-31-52,228,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:     (i) 15% of taxable income if the taxable income is not over $29,600;
+Fact pattern: Alice is a head of household for the year 2017. Alice's taxable income for the year 2017 is $1172980.
+choice: True
+choice: False
+A: False
+Explanation: Alice's taxable income is not within the range. 
+
+Statute:     (16) service performed in the employ of an international organization;
+Fact pattern: Alice was paid $73200 in 2017 as an employee of the United States Government in Arlington, Virginia, USA.
+choice: True
+choice: False
+A: 
+Explanation:",(16) service performed in the employ of an international organization;,"Alice was paid $73200 in 2017 as an employee of the United States Government in Arlington, Virginia, USA.","False
+Explanation: The statute specifically refers to service performed in the employ of an international organization, while the fact pattern describes Alice being employed by the United States Government, not an international organization.",FALSE,FALSE,TRUE,0,"Alice was employed by a national, not international, government.",FALSE,correct,N/A,FALSE
+19,v1.2_02-24-2024_20-31-52,74,"system: You will be provided with multiple pairs of a legal statute and a fact pattern. If there is ambiguity, respond “True”; if there is no ambiguity, respond “False.” Then, explain your reasoning.
+
+user: Statute:         (B) who has the same principal place of abode as the taxpayer for more than one-half of such taxable year,
+Fact pattern: Alice has a son, Bob. From September 1st, 2015 to May 3rd, 2016, Alice and Bob lived in the same home. On May 3rd, 2016, Alice bought a new property, which she and Bob are still in the process of moving into. The current year is 2015.
+choice: True
+choice: False
+A: False
+Explanation: Regardless of future plans, Alice and Bob did not have the same principal abode for more than one-half of the current year.
+
+Statute:         (B) who has the same principal place of abode as the taxpayer for more than one-half of such taxable year,
+Fact pattern: Alice has a son, Bob. From September 1st, 2015 to May 3rd, 2016, Alice and Bob lived in the same home. On May 3rd, 2016, Alice got engaged to Charlie, and started splitting her time between the home with Bob and Charlie's home. The current year is 2015.
+choice: True
+choice: False
+A: 
+Explanation:","(B) who has the same principal place of abode as the taxpayer for more than one-half of such taxable year,","Alice has a son, Bob. From September 1st, 2015 to May 3rd, 2016, Alice and Bob lived in the same home. On May 3rd, 2016, Alice got engaged to Charlie, and started splitting her time between the home with Bob and Charlie's home. The current year is 2015.","True
+Explanation: There's ambiguity here because it's unclear whether Alice's time splitting between Bob's home and Charlie's home after May 3rd, 2016, reduces the number of days she has the same principal place of abode as Bob to less than one-half of the taxable year. Additionally, the statement spans two different calendar years (2015 and 2016), and the statute requires the principal place of abode to be the same for more than one-half of ""such taxable year,"" without specifying how to handle situations that span multiple taxable years.",TRUE,FALSE,FALSE,0,"Regardless of future plans, Alice and Bob did not have the same principal abode for more than one-half of the current year.",FALSE,N/A,"unusual def, incorrect concl",FALSE

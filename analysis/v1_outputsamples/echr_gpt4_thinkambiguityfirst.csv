@@ -1,0 +1,92 @@
+,run,ds_ind,model_output,uncertain,uncertain_object,mult_interp,statute_lang,core_ambiguity
+0,v1.2_02-21-2024_15-04-34,161,"In legal contexts, ambiguity refers to a situation where a statute, regulation, or any piece of legal writing is unclear, vague, or uncertain, meaning it can be understood in more than one way. This might arise due to the way the language is used in the document, leaving room for multiple interpretations regarding its application or meaning.
+
+True",TRUE,statute,TRUE,TRUE,counter
+1,v1.2_02-21-2024_15-04-34,21,"In legal contexts, ambiguity refers to a situation where a statute, provision, or clause is unclear or can be interpreted in more than one way due to vague language, conflicting provisions, or a lack of specific detail. Ambiguity occurs when the meaning of a legal text cannot be determined with certainty, leading to differing interpretations among parties or by the courts.
+
+False",TRUE,statute,TRUE,TRUE,both
+2,v1.2_02-21-2024_15-04-34,324,"In legal terms, ambiguity refers to a situation where a statute, provision, or clause can be understood in more than one way due to unclear language, vagueness, or incomplete information. When a text is ambiguous, it may lead to different interpretations, raising questions about the correct or intended meaning of the text. Ambiguity often requires clarification through judicial interpretation, further legislative action, or administrative guidance to ensure consistent application and understanding.
+
+Regarding the provided statute and fact pattern: False.",TRUE,statute,TRUE,TRUE,counter
+3,v1.2_02-25-2024_14-03-24,268,"In this context, ambiguity refers to the presence of unclear, vague, or uncertain language in the statute, which may lead to different interpretations. Ambiguity may arise from words, phrases, clauses, or from the overall structure of the legal text. The determination of ambiguity often requires examining the statute in light of a specific fact pattern to assess whether its language unequivocally applies to the given circumstances.
+
+Considering the provided statute and the fact pattern: False",TRUE,statute,TRUE,TRUE,counter
+4,v1.2_02-21-2024_15-04-34,96,"In legal terms, ambiguity refers to uncertainty or doubtfulness in the meaning, wording, or interpretation of a statute, agreement, or resolution. Ambiguity arises when a document, rule, or statement has more than one reasonable interpretation or when the language used can lead to differing conclusions or applications in different situations. In the context of interpreting statutes or legal documents, determining whether ambiguity exists can be crucial for deciding the proper application of the law to a given set of facts.
+
+True",TRUE,statute,TRUE,TRUE,both
+5,v1.2_02-25-2024_14-03-24,157,"In legal context, ambiguity refers to uncertainty or doubtfulness in the meaning, interpretation, or application of a law, statute, contract, or any legal document. It arises when a provision can reasonably be understood in more than one way or when it lacks clear definition or specificity, leading to multiple reasonable interpretations.
+
+In the provided statute and fact pattern, the question of ambiguity revolves around whether the statute's provisions clearly and unambiguously apply to the situation described in the fact pattern.
+
+Given this context:
+
+True or False regarding ambiguity: False",TRUE,"statute, appl",TRUE,TRUE,both
+6,v1.2_02-24-2024_20-31-52,180,"Ambiguity in this context means the presence of uncertainty or vagueness in the language or provisions of the statute, which may lead to multiple interpretations.
+
+False",TRUE,statute,TRUE,TRUE,counter
+7,v1.2_02-24-2024_20-31-52,179,"Ambiguity, in legal contexts, refers to a situation where a statute, regulation, or any piece of legal text is unclear, vague, or open to more than one reasonable interpretation. This could arise due to the text being drafted in a way that does not specifically address all possible scenarios or because the terminology used can have different meanings in different contexts. Ambiguity in legal documents poses challenges in enforcement and interpretation, often requiring judicial clarification to determine the intent and applicable scope of the law.
+
+Regarding the provided statute and fact pattern:
+
+False",TRUE,statute,TRUE,TRUE,both
+8,v1.2_02-25-2024_14-03-24,222,"In the context of legal interpretation, ambiguity refers to a situation where a statute, legal text, or provision can be understood in more than one way due to vagueness or uncertainty in its wording, making it unclear how it should be applied to a specific situation or fact pattern. Ambiguity often arises when the language used in the statute is broad, the text contains undefined terms, or it can reasonably support more than one interpretation of its meaning or application.
+
+Based on the provided statute and fact pattern:
+
+True.",TRUE,statute,TRUE,TRUE,both
+9,v1.2_02-24-2024_20-31-52,189,"In this context, ambiguity refers to a lack of clarity or precision in language or provisions which makes it difficult to interpret them definitively. This can arise due to vague terms, multiple interpretations that are reasonable, or lack of specifics that would allow for clear understanding and application.
+
+False",TRUE,statute,TRUE,TRUE,both
+10,v1.2_02-24-2024_20-31-52,62,"Ambiguity, in this context, refers to any aspect of the statute that is open to more than one interpretation, meaning, or explanation, particularly when such interpretations can lead to different conclusions or applications of the law based on the given fact pattern.
+
+True",FALSE,"statute, appl",TRUE,FALSE,mine
+11,v1.2_02-25-2024_14-03-24,39,"In this context, ambiguity refers to the lack of clarity or certainty in the language or application of a legal statute, where a term, phrase, or provision may be open to more than one reasonable interpretation or application. Ambiguity typically arises when the text of a legal document, like a statute or contract, is vague, has multiple meanings, or is otherwise unclear, making it difficult to discern the exact intent of the law or how it should be applied to a specific set of facts.
+
+Given the statute (Article 11) and the fact pattern provided:
+
+False",TRUE,"statute, appl",TRUE,TRUE,both
+12,v1.2_02-25-2024_14-03-24,166,"In legal terms, ambiguity refers to a situation where a rule, term, phrase, or provision in a statute, regulation, or contract can be understood in more than one way by reasonable people. This can arise from vague or imprecise language, conflicting provisions, or the absence of a specific definition that makes the intent or application of the language unclear. Ambiguity requires interpretation by courts to determine the meaning or intent of the unclear portions.
+
+Based on the provided statute and fact pattern, there is ambiguity in the application of the statute to the fact pattern. 
+
+True",TRUE,statute,TRUE,TRUE,counter
+13,v1.2_02-24-2024_20-31-52,154,"In this context, ambiguity refers to the presence of uncertainty or vagueness in language, statutes, or legal requirements that may lead to multiple interpretations. An ambiguous statute or clause does not clearly define terms, conditions, obligations, or rights, resulting in difficulties in understanding its exact intent or application.
+
+True",TRUE,statute,TRUE,TRUE,counter
+14,v1.2_02-21-2024_15-04-34,259,"In this context, ambiguity means a lack of clarity in the language or terms used within the statute that makes it subject to more than one interpretation. It implies that the wording of the statute is vague or not explicit enough, leading to potential confusion about its application to specific situations or facts.
+
+False",TRUE,"statute, appl",TRUE,TRUE,counter
+15,v1.2_02-25-2024_14-03-24,59,"In this context, ambiguity refers to a lack of clarity in language, terms, or provisions within a legal statute or a fact pattern, which creates uncertainty regarding the interpretation or application of said statute or fact pattern.
+
+True",TRUE,"statute, facts, appl",FALSE,TRUE,counter
+16,v1.2_02-24-2024_20-31-52,440,"In legal terms, ambiguity refers to uncertainty or doubtfulness in the meaning, intention, or application of a statute or provision due to its language being vague, unclear, or having multiple interpretations. Ambiguity can arise from the wording of the statute itself or from its application to specific circumstances.
+
+Given this definition, we need to ascertain whether there is ambiguity in the provided statute when applied to the fact pattern.
+
+**Statute**:
+The statute in question outlines the protection of property, stating everyone has the right to the peaceful enjoyment of their possessions unless deprivation is in the public interest and according to law and international principles. It also allows states to enforce laws deemed necessary to control property use, ensure tax payment, or impose penalties.
+
+**Fact Pattern**:
+The fact pattern revolves around an individual's (the applicant) claim for payment for services provided, which was acknowledged and partially settled through legal processes, including insolvency proceedings of a debtor company, and subsequent judicial decisions. The applicant's contention is regarding the partial payment received (10% of the total debt).
+
+Considering the definition of ambiguity:
+
+- The statute’s provision about the ""peaceful enjoyment of his possessions"" and the exceptions to deprivation of possessions might not directly reflect on the fact pattern's specifics regarding the insolvency proceedings and the claim for unpaid services.
+- The statute speaks to property rights but does not clearly define what constitutes “public interest” or the exact ""conditions provided for by law"" in cases like insolvency, which involves settling debts and claims against a company's remaining assets.
+- The ambiguity question could arise on whether the applicant's right to full compensation for his services falls under these protected property rights, especially when considered against the backdrop of insolvency laws where claims often result in partial payments.
+
+**True or False Assessment**:
+Given the complexity of how the statute's broader provisions on property protection apply to the specific scenario of insolvency proceedings and debt repayment to a service provider, and considering the statute does not detail how such cases should be handled specifically, **True**; there is ambiguity in how the statute applies to the described fact pattern.",TRUE,"statute, appl",TRUE,TRUE,both
+17,v1.2_02-25-2024_14-03-24,41,"In legal terms, ambiguity refers to a situation where a statute, provision, or any written legal instruction can be understood in more than one way due to unclear language, lack of specific definitions, or both. Ambiguity arises when a law or regulation is not straightforward or is open to multiple interpretations. This can lead to confusion about how the law should be applied in specific situations.
+
+False",TRUE,"statute, appl",TRUE,TRUE,counter
+18,v1.2_02-25-2024_14-03-24,356,"In a legal context, ambiguity refers to uncertainty or doubtfulness in the meaning, interpretation, or application of a word, phrase, sentence, or any part of a legal document, including statutes, contracts, agreements, and judicial decisions. Ambiguity arises when a text can be understood in more than one way by reasonable people, leading to differing interpretations that may affect the outcome of legal reasoning, rights, and obligations.
+
+True",TRUE,statute,TRUE,TRUE,mine
+19,v1.2_02-25-2024_14-03-24,228,"In this context, ambiguity means the lack of clarity or uncertainty in meaning within a legal statute or in a given set of facts. It occurs when a statute or fact pattern can be reasonably interpreted in more than one way, leading to confusion or differing interpretations regarding its application or the outcome of a legal decision.
+
+Based on the provided statute and fact pattern:
+
+True or False: There is ambiguity.
+
+False",TRUE,"statute, facts, appl",TRUE,FALSE,mine

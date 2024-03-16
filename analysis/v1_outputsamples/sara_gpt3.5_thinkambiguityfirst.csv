@@ -1,0 +1,69 @@
+,run,ds_ind,model_output,uncertain,uncertain_object,mult_interp,statute_lang,core_ambiguity
+0,v1.2_02-24-2024_20-31-52,60,"Ambiguity in legal context refers to when a provision or term in a statute can be reasonably interpreted in more than one way. This ambiguity may lead to uncertainty in understanding and applying the law.
+
+Given the fact pattern provided, it is False that there is ambiguity. Charlie counts as Alice's dependent under section 152(c)(1) for 2015, so the statute clearly determines that Alice can claim an exemption amount for Charlie as her dependent for the taxable year.",TRUE,statute,TRUE,TRUE,mine
+1,v1.2_02-24-2024_20-31-52,139,"Ambiguity in legal context refers to a situation where a law, rule, or contract could be interpreted in more than one way, leading to confusion or uncertainty about its intended meaning.
+
+In this case, there is ambiguity in the statute because it is unclear how the term ""remarried"" applies to Bob's current situation with Charlie. Therefore, the response is ""True.""",TRUE,statute,TRUE,FALSE,mine
+2,v1.2_02-21-2024_15-04-34,150,"In this context, ambiguity means that the statute is unclear or open to interpretation.
+
+False",TRUE,statute,TRUE,FALSE,both
+3,v1.2_02-24-2024_20-31-52,309,"Ambiguity in this context refers to uncertainty or lack of clarity in the language of the legal statute, which could lead to different interpretations or understandings of its meaning.
+
+False",TRUE,statute,TRUE,TRUE,counter
+4,v1.2_02-21-2024_15-04-34,100,"Ambiguity refers to the presence of multiple possible interpretations or meanings in a legal document.
+
+In the given fact pattern and statute snippet, the term ""income"" is not defined. Therefore, there is ambiguity as to what constitutes ""income"" for the purposes of this statute. 
+
+Thus, the response is: True",FALSE,statute,TRUE,FALSE,mine
+5,v1.2_02-24-2024_20-31-52,170,"In this context, ambiguity means uncertainty or lack of clarity in the language used in the legal statute. 
+
+True",TRUE,statute,FALSE,TRUE,counter
+6,v1.2_02-25-2024_14-03-24,207,"In this context, ambiguity means that a provision in the statute is unclear or open to more than one interpretation.
+
+True",TRUE,statute,TRUE,FALSE,both
+7,v1.2_02-25-2024_14-03-24,230,"In this context, ambiguity refers to a lack of clarity or uncertainty in the definition or interpretation of the legal statute provided.
+
+Given the legal statute provided and the fact pattern, the response is False.",TRUE,statute,TRUE,TRUE,counter
+8,v1.2_02-25-2024_14-03-24,173,"In this context, ambiguity refers to a lack of clarity or uncertainty in the language used in the statute.
+
+The statute provided states that the employer must have paid wages of $1,500 or more ""during the calendar year or the preceding calendar year."" 
+
+Given the fact pattern provided, it is unclear whether the statute is referring to the total wages paid by the employer in a single year or if it is considering the wages paid to individual employees in different years. 
+
+Therefore, the correct response is ""True"" as there is ambiguity in this scenario.",TRUE,statute,FALSE,TRUE,counter
+9,v1.2_02-25-2024_14-03-24,170,"In this context, ambiguity means that the language of the statute is unclear or open to more than one interpretation.
+
+False",TRUE,statute,TRUE,TRUE,both
+10,v1.2_02-21-2024_15-04-34,70,"Ambiguity in legal context refers to a situation where a law or provision is unclear or open to more than one interpretation.
+
+False",TRUE,statute,TRUE,FALSE,both
+11,v1.2_02-25-2024_14-03-24,62,"In this context, ambiguity refers to a lack of clarity or uncertainty in the interpretation of the legal statute.
+
+False",TRUE,statute,FALSE,FALSE,both
+12,v1.2_02-21-2024_15-04-34,98,"In this context, ambiguity refers to uncertainty or lack of clarity in the language of the legal statute, making it open to interpretation or multiple meanings.
+
+Given the legal statute provided and the fact pattern, there is ambiguity present.",TRUE,statute,TRUE,TRUE,counter
+13,v1.2_02-25-2024_14-03-24,86,"In this context, ambiguity means that there is uncertainty or confusion about whether a certain individual falls under a particular category or definition described in the statute.
+
+True",TRUE,"statute, appl",TRUE,FALSE,mine
+14,v1.2_02-21-2024_15-04-34,149,"In this context, ambiguity refers to any uncertainty or lack of clarity in the legal statute that could lead to different interpretations or understandings.
+
+False",TRUE,statute,TRUE,FALSE,counter
+15,v1.2_02-24-2024_20-31-52,37,"In this context, ambiguity means that there is uncertainty or lack of clarity in how a legal provision should be applied or interpreted.
+
+False",TRUE,statute,TRUE,FALSE,both
+16,v1.2_02-21-2024_15-04-34,166,"In this context, ambiguity refers to whether the statute is unclear or open to more than one interpretation.
+
+True",TRUE,statute,TRUE,FALSE,both
+17,v1.2_02-24-2024_20-31-52,159,"Ambiguity in this context refers to a lack of clarity or uncertainty in the wording of a legal statute that could lead to confusion or different interpretations.
+
+In this case, the statute specifies that an individual who is legally separated from their spouse under a decree of divorce or separate maintenance shall not be considered as married. The fact pattern provided states that Alice and Bob got married in 1992, but they did not legally separate as of 2017.
+
+FALSE. Based on the information provided, there is no ambiguity in this case. The statute clearly requires legal separation for an individual to not be considered married, and the fact pattern confirms that Alice and Bob did not obtain a legal separation.",TRUE,statute,TRUE,TRUE,counter
+18,v1.2_02-25-2024_14-03-24,59,"Ambiguity means that a provision in a statute could be interpreted in more than one way, leading to uncertainty or confusion regarding its meaning.
+
+True",TRUE,statute,TRUE,FALSE,mine
+19,v1.2_02-21-2024_15-04-34,89,"In this context, ambiguity refers to any uncertainty or lack of clarity in the wording of the legal statute that may lead to different interpretations or confusion.
+
+Given the fact pattern provided, there is no ambiguity in the statute. The statute clearly states the eligible relationships for the tax benefit, and the adoption of Bob does not change the fact that he is still Alice's descendant. Therefore, the correct response is ""False.""",TRUE,statute,TRUE,TRUE,counter
